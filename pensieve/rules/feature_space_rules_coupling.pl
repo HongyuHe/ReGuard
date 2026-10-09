@@ -1,0 +1,8 @@
+Equality(Mul(Integer(1000), Symbol('DelayMs0', real=True), Symbol('ThroughputMbps0', real=True)), Mul(Integer(8), Symbol('ChosenChunkBytes0', real=True)))
+Equality(Mul(Integer(1000), Symbol('DelayMs1', real=True), Symbol('ThroughputMbps1', real=True)), Mul(Integer(8), Symbol('ChosenChunkBytes1', real=True)))
+Equality(Mul(Integer(1000), Symbol('DelayMs2', real=True), Symbol('ThroughputMbps2', real=True)), Mul(Integer(8), Symbol('ChosenChunkBytes2', real=True)))
+Equality(Mul(Integer(1000), Symbol('DelayMs3', real=True), Symbol('ThroughputMbps3', real=True)), Mul(Integer(8), Symbol('ChosenChunkBytes3', real=True)))
+Equality(Mul(Integer(1000), Symbol('DelayMs4', real=True), Symbol('ThroughputMbps4', real=True)), Mul(Integer(8), Symbol('ChosenChunkBytes4', real=True)))
+Equality(Mul(Integer(1000), Symbol('DelayMs5', real=True), Symbol('ThroughputMbps5', real=True)), Mul(Integer(8), Symbol('ChosenChunkBytes5', real=True)))
+Equality(Mul(Integer(1000), Symbol('DelayMs6', real=True), Symbol('ThroughputMbps6', real=True)), Mul(Integer(8), Symbol('ChosenChunkBytes6', real=True)))
+Equality(Mul(Integer(1000), Symbol('DelayMs7', real=True), Symbol('ThroughputMbps7', real=True)), Mul(Integer(8), Symbol('ChosenChunkBytes7', real=True)))

@@ -1,0 +1,852 @@
+{
+  "script": "surrogate/generate_pgd_surrogate_traces.py",
+  "victim_checkpoint": "/Users/hongyu/Projects/Formal/park-load-balance-torch/models/parklb_v1_350k.pt",
+  "surrogate_checkpoint": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/artifacts/surrogate_step_model.pt",
+  "episodes": 100,
+  "trace_select_mode": "round_robin",
+  "seed": 42,
+  "num_servers": 10,
+  "service_rates": [
+    0.15,
+    0.25,
+    0.35,
+    0.45,
+    0.55,
+    0.65,
+    0.75,
+    0.85,
+    0.95,
+    1.05
+  ],
+  "obs_high": 500000.0,
+  "reward_time_scale": 1000.0,
+  "oracle_k": 5,
+  "window_k": 5,
+  "stride": 5,
+  "iters": 20,
+  "restarts": 3,
+  "alpha": 0.05,
+  "dt_min": 1.0,
+  "dt_max": 11.0,
+  "size_min": 1.0,
+  "size_max": 2496194.0,
+  "dt_eps_abs": 50.0,
+  "dt_eps_rel": 0.5,
+  "size_eps_abs": 1000.0,
+  "size_eps_rel": 0.5,
+  "reward_weight": 1.0,
+  "backlog_weight": 0.05,
+  "active_weight": 0.05,
+  "surrogate_config": {
+    "num_servers": 10,
+    "hidden": 256,
+    "dt_min": 1.0,
+    "dt_max": 11.0,
+    "size_min": 1.0,
+    "size_max": 2496194.0,
+    "reward_mean": -0.009835249744355679,
+    "reward_std": 0.03463244438171387
+  },
+  "traces": [
+    {
+      "trace_id": "episode_0000",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00000.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0000.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0000.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0001",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00001.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0001.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0001.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0002",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00002.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0002.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0002.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0003",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00003.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0003.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0003.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0004",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00004.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0004.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0004.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0005",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00005.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0005.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0005.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0006",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00006.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0006.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0006.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0007",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00007.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0007.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0007.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0008",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00008.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0008.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0008.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0009",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00009.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0009.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0009.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0010",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00010.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0010.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0010.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0011",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00011.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0011.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0011.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0012",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00012.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0012.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0012.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0013",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00013.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0013.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0013.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0014",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00014.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0014.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0014.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0015",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00015.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0015.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0015.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0016",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00016.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0016.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0016.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0017",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00017.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0017.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0017.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0018",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00018.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0018.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0018.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0019",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/default_trace_00019.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0019.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0019.json",
+      "num_jobs": 2000,
+      "window_count": 400
+    },
+    {
+      "trace_id": "episode_0020",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00000.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0020.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0020.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0021",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00001.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0021.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0021.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0022",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00002.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0022.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0022.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0023",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00003.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0023.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0023.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0024",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00004.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0024.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0024.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0025",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00005.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0025.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0025.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0026",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00006.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0026.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0026.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0027",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00007.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0027.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0027.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0028",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00008.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0028.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0028.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0029",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00009.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0029.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0029.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0030",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00010.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0030.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0030.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0031",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00011.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0031.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0031.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0032",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00012.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0032.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0032.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0033",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00013.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0033.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0033.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0034",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00014.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0034.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0034.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0035",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00015.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0035.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0035.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0036",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00016.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0036.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0036.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0037",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00017.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0037.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0037.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0038",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00018.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0038.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0038.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0039",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/original_trace_00019.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0039.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0039.json",
+      "num_jobs": 1000,
+      "window_count": 200
+    },
+    {
+      "trace_id": "episode_0040",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00000.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0040.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0040.json",
+      "num_jobs": 69,
+      "window_count": 14
+    },
+    {
+      "trace_id": "episode_0041",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00001.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0041.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0041.json",
+      "num_jobs": 49,
+      "window_count": 10
+    },
+    {
+      "trace_id": "episode_0042",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00002.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0042.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0042.json",
+      "num_jobs": 79,
+      "window_count": 16
+    },
+    {
+      "trace_id": "episode_0043",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00003.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0043.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0043.json",
+      "num_jobs": 65,
+      "window_count": 13
+    },
+    {
+      "trace_id": "episode_0044",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00004.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0044.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0044.json",
+      "num_jobs": 52,
+      "window_count": 11
+    },
+    {
+      "trace_id": "episode_0045",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00005.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0045.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0045.json",
+      "num_jobs": 24,
+      "window_count": 5
+    },
+    {
+      "trace_id": "episode_0046",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00006.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0046.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0046.json",
+      "num_jobs": 87,
+      "window_count": 18
+    },
+    {
+      "trace_id": "episode_0047",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00007.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0047.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0047.json",
+      "num_jobs": 31,
+      "window_count": 6
+    },
+    {
+      "trace_id": "episode_0048",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00008.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0048.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0048.json",
+      "num_jobs": 22,
+      "window_count": 5
+    },
+    {
+      "trace_id": "episode_0049",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00009.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0049.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0049.json",
+      "num_jobs": 87,
+      "window_count": 18
+    },
+    {
+      "trace_id": "episode_0050",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00010.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0050.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0050.json",
+      "num_jobs": 28,
+      "window_count": 6
+    },
+    {
+      "trace_id": "episode_0051",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00011.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0051.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0051.json",
+      "num_jobs": 55,
+      "window_count": 11
+    },
+    {
+      "trace_id": "episode_0052",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00012.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0052.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0052.json",
+      "num_jobs": 76,
+      "window_count": 15
+    },
+    {
+      "trace_id": "episode_0053",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00013.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0053.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0053.json",
+      "num_jobs": 65,
+      "window_count": 13
+    },
+    {
+      "trace_id": "episode_0054",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00014.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0054.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0054.json",
+      "num_jobs": 25,
+      "window_count": 5
+    },
+    {
+      "trace_id": "episode_0055",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00015.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0055.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0055.json",
+      "num_jobs": 26,
+      "window_count": 5
+    },
+    {
+      "trace_id": "episode_0056",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00016.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0056.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0056.json",
+      "num_jobs": 86,
+      "window_count": 17
+    },
+    {
+      "trace_id": "episode_0057",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00017.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0057.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0057.json",
+      "num_jobs": 83,
+      "window_count": 17
+    },
+    {
+      "trace_id": "episode_0058",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00018.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0058.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0058.json",
+      "num_jobs": 36,
+      "window_count": 7
+    },
+    {
+      "trace_id": "episode_0059",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00019.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0059.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0059.json",
+      "num_jobs": 83,
+      "window_count": 17
+    },
+    {
+      "trace_id": "episode_0060",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00000.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0060.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0060.json",
+      "num_jobs": 738,
+      "window_count": 148
+    },
+    {
+      "trace_id": "episode_0061",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00001.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0061.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0061.json",
+      "num_jobs": 242,
+      "window_count": 49
+    },
+    {
+      "trace_id": "episode_0062",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00002.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0062.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0062.json",
+      "num_jobs": 686,
+      "window_count": 137
+    },
+    {
+      "trace_id": "episode_0063",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00003.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0063.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0063.json",
+      "num_jobs": 573,
+      "window_count": 115
+    },
+    {
+      "trace_id": "episode_0064",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00004.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0064.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0064.json",
+      "num_jobs": 442,
+      "window_count": 89
+    },
+    {
+      "trace_id": "episode_0065",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00005.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0065.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0065.json",
+      "num_jobs": 750,
+      "window_count": 150
+    },
+    {
+      "trace_id": "episode_0066",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00006.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0066.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0066.json",
+      "num_jobs": 33,
+      "window_count": 7
+    },
+    {
+      "trace_id": "episode_0067",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00007.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0067.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0067.json",
+      "num_jobs": 617,
+      "window_count": 124
+    },
+    {
+      "trace_id": "episode_0068",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00008.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0068.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0068.json",
+      "num_jobs": 229,
+      "window_count": 46
+    },
+    {
+      "trace_id": "episode_0069",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00009.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0069.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0069.json",
+      "num_jobs": 819,
+      "window_count": 164
+    },
+    {
+      "trace_id": "episode_0070",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00010.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0070.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0070.json",
+      "num_jobs": 272,
+      "window_count": 55
+    },
+    {
+      "trace_id": "episode_0071",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00011.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0071.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0071.json",
+      "num_jobs": 933,
+      "window_count": 187
+    },
+    {
+      "trace_id": "episode_0072",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00012.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0072.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0072.json",
+      "num_jobs": 206,
+      "window_count": 41
+    },
+    {
+      "trace_id": "episode_0073",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00013.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0073.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0073.json",
+      "num_jobs": 194,
+      "window_count": 39
+    },
+    {
+      "trace_id": "episode_0074",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00014.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0074.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0074.json",
+      "num_jobs": 834,
+      "window_count": 167
+    },
+    {
+      "trace_id": "episode_0075",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00015.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0075.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0075.json",
+      "num_jobs": 354,
+      "window_count": 71
+    },
+    {
+      "trace_id": "episode_0076",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00016.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0076.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0076.json",
+      "num_jobs": 755,
+      "window_count": 151
+    },
+    {
+      "trace_id": "episode_0077",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00017.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0077.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0077.json",
+      "num_jobs": 407,
+      "window_count": 82
+    },
+    {
+      "trace_id": "episode_0078",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00018.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0078.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0078.json",
+      "num_jobs": 205,
+      "window_count": 41
+    },
+    {
+      "trace_id": "episode_0079",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl2_trace_00019.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0079.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0079.json",
+      "num_jobs": 623,
+      "window_count": 125
+    },
+    {
+      "trace_id": "episode_0080",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00000.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0080.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0080.json",
+      "num_jobs": 2008,
+      "window_count": 402
+    },
+    {
+      "trace_id": "episode_0081",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00001.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0081.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0081.json",
+      "num_jobs": 4353,
+      "window_count": 871
+    },
+    {
+      "trace_id": "episode_0082",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00002.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0082.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0082.json",
+      "num_jobs": 3495,
+      "window_count": 699
+    },
+    {
+      "trace_id": "episode_0083",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00003.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0083.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0083.json",
+      "num_jobs": 2067,
+      "window_count": 414
+    },
+    {
+      "trace_id": "episode_0084",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00004.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0084.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0084.json",
+      "num_jobs": 4447,
+      "window_count": 890
+    },
+    {
+      "trace_id": "episode_0085",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00005.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0085.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0085.json",
+      "num_jobs": 530,
+      "window_count": 106
+    },
+    {
+      "trace_id": "episode_0086",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00006.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0086.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0086.json",
+      "num_jobs": 3538,
+      "window_count": 708
+    },
+    {
+      "trace_id": "episode_0087",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00007.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0087.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0087.json",
+      "num_jobs": 3934,
+      "window_count": 787
+    },
+    {
+      "trace_id": "episode_0088",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00008.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0088.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0088.json",
+      "num_jobs": 446,
+      "window_count": 89
+    },
+    {
+      "trace_id": "episode_0089",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00009.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0089.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0089.json",
+      "num_jobs": 3572,
+      "window_count": 715
+    },
+    {
+      "trace_id": "episode_0090",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00010.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0090.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0090.json",
+      "num_jobs": 4134,
+      "window_count": 827
+    },
+    {
+      "trace_id": "episode_0091",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00011.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0091.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0091.json",
+      "num_jobs": 3817,
+      "window_count": 764
+    },
+    {
+      "trace_id": "episode_0092",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00012.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0092.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0092.json",
+      "num_jobs": 2739,
+      "window_count": 548
+    },
+    {
+      "trace_id": "episode_0093",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00013.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0093.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0093.json",
+      "num_jobs": 760,
+      "window_count": 152
+    },
+    {
+      "trace_id": "episode_0094",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00014.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0094.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0094.json",
+      "num_jobs": 2955,
+      "window_count": 591
+    },
+    {
+      "trace_id": "episode_0095",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00015.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0095.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0095.json",
+      "num_jobs": 2765,
+      "window_count": 553
+    },
+    {
+      "trace_id": "episode_0096",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00016.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0096.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0096.json",
+      "num_jobs": 3443,
+      "window_count": 689
+    },
+    {
+      "trace_id": "episode_0097",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00017.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0097.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0097.json",
+      "num_jobs": 4226,
+      "window_count": 845
+    },
+    {
+      "trace_id": "episode_0098",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00018.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0098.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0098.json",
+      "num_jobs": 2179,
+      "window_count": 436
+    },
+    {
+      "trace_id": "episode_0099",
+      "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl3_trace_00019.csv",
+      "csv_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0099.csv",
+      "json_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/episode_0099.json",
+      "num_jobs": 1238,
+      "window_count": 248
+    }
+  ]
+}

@@ -1,0 +1,1014 @@
+{
+  "framework": "sage",
+  "source": "sage_project_archive/scripts/eval_sage_clean_vs_adv.py command records and eval_summary.json metadata",
+  "cases": [
+    {
+      "name": "clean",
+      "args": [
+        "--test-manifest",
+        "inputs/attacks/test/manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260320_gap-constrained-all_50ms_300k.config.json",
+        "--clean-only-rollout",
+        "--wandb-name",
+        "clean",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "clean_genet-trained",
+      "args": [
+        "--test-manifest",
+        "inputs/attacks/train/manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260320_gap-constrained-all_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/genet/gap-constrained-all-loss_50ms_300k/final_model",
+        "--clean-only-rollout",
+        "--wandb-name",
+        "clean_genet-trained",
+        "--seed",
+        "42"
+      ],
+      "count": 48
+    },
+    {
+      "name": "clean_shield-genet",
+      "args": [
+        "--test-manifest",
+        "inputs/attacks/test/manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260320_gap-constrained-all_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/genet_gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--clean-only-rollout",
+        "--wandb-name",
+        "clean_shield-genet",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "clean_shield-hotnets19",
+      "args": [
+        "--test-manifest",
+        "inputs/attacks/test/manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260320_gap-constrained-all_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/hotnets19-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--clean-only-rollout",
+        "--wandb-name",
+        "clean_shield-hotnets19",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "clean_shield-pgd",
+      "args": [
+        "--test-manifest",
+        "inputs/attacks/test/manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260320_gap-constrained-all_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/pgd_gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--clean-only-rollout",
+        "--wandb-name",
+        "clean_shield-pgd",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "clean_shield-predicate",
+      "args": [
+        "--test-manifest",
+        "inputs/attacks/test/manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260320_gap-constrained-all_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--clean-only-rollout",
+        "--wandb-name",
+        "clean_shield-predicate",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "clean_shield-predicate-random",
+      "args": [
+        "--test-manifest",
+        "inputs/attacks/test/manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260320_gap-constrained-all_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/random_gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--clean-only-rollout",
+        "--wandb-name",
+        "clean_shield-predicate-random",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "finetuned-constrained-all-loss-300k-50ms",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/output/sage-finetune/gap-constrained-all-loss_50ms_300k/policy_finetuned",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "finetuned-constrained-all-loss-300k-50ms",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "finetuned-genet_gap-constrained-all-loss_50ms_300k",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/genet_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/output/sage-finetune/genet_gap-constrained-all-loss_50ms_300k/policy_finetuned",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "finetuned-genet_gap-constrained-all-loss_50ms_300k",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "finetuned-hotnets19-loss_50ms_300k",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/hotnets19-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/online_adv_20260321_hotnets19-loss_300k_50ms.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/output/sage-finetune/hotnets19-loss_50ms_300k/policy_finetuned",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "finetuned-hotnets19-loss_50ms_300k",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "finetuned-pgd_gap-constrained-all-loss_50ms_300k",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/pgd_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/output/sage-finetune/pgd_gap-constrained-all-loss_50ms_300k/policy_finetuned",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "finetuned-pgd_gap-constrained-all-loss_50ms_300k",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "finetuned-random_gap-constrained-all-loss_50ms_300k",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/random_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/output/sage-finetune/random_gap-constrained-all-loss_50ms_300k/policy_finetuned",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "finetuned-random_gap-constrained-all-loss_50ms_300k",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "finetuned_clean-clean",
+      "args": [
+        "--test-manifest",
+        "inputs/attacks/train/manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260320_gap-constrained-all_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/output/sage-finetune/clean/policy_finetuned",
+        "--clean-only-rollout",
+        "--wandb-name",
+        "finetuned_clean-clean",
+        "--seed",
+        "42"
+      ],
+      "count": 48
+    },
+    {
+      "name": "finetuned_clean-gap-constrained-all-loss",
+      "args": [
+        "--test-manifest",
+        "inputs/attacks/train/manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260320_gap-constrained-all_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/output/sage-finetune/gap-constrained-all-loss_50ms_300k/policy_finetuned",
+        "--clean-only-rollout",
+        "--wandb-name",
+        "finetuned_clean-gap-constrained-all-loss",
+        "--seed",
+        "42"
+      ],
+      "count": 48
+    },
+    {
+      "name": "finetuned_clean-genet_gap-constrained-all-loss",
+      "args": [
+        "--test-manifest",
+        "inputs/attacks/train/manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260320_gap-constrained-all_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/output/sage-finetune/genet_gap-constrained-all-loss_50ms_300k/policy_finetuned",
+        "--clean-only-rollout",
+        "--wandb-name",
+        "finetuned_clean-genet_gap-constrained-all-loss",
+        "--seed",
+        "42"
+      ],
+      "count": 48
+    },
+    {
+      "name": "finetuned_clean-hotnets19-loss",
+      "args": [
+        "--test-manifest",
+        "inputs/attacks/train/manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260320_gap-constrained-all_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/output/sage-finetune/hotnets19-loss_50ms_300k/policy_finetuned",
+        "--clean-only-rollout",
+        "--wandb-name",
+        "finetuned_clean-hotnets19-loss",
+        "--seed",
+        "42"
+      ],
+      "count": 48
+    },
+    {
+      "name": "finetuned_clean-pgd_gap-constrained-all-loss",
+      "args": [
+        "--test-manifest",
+        "inputs/attacks/train/manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260320_gap-constrained-all_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/output/sage-finetune/pgd_gap-constrained-all-loss_50ms_300k/policy_finetuned",
+        "--clean-only-rollout",
+        "--wandb-name",
+        "finetuned_clean-pgd_gap-constrained-all-loss",
+        "--seed",
+        "42"
+      ],
+      "count": 48
+    },
+    {
+      "name": "finetuned_clean-random_gap-constrained-all-loss",
+      "args": [
+        "--test-manifest",
+        "inputs/attacks/train/manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260320_gap-constrained-all_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/output/sage-finetune/random_gap-constrained-all-loss_50ms_300k/policy_finetuned",
+        "--clean-only-rollout",
+        "--wandb-name",
+        "finetuned_clean-random_gap-constrained-all-loss",
+        "--seed",
+        "42"
+      ],
+      "count": 48
+    },
+    {
+      "name": "finetuned_mixed-gap-constrained-all-loss-300k-50ms",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/output/sage-finetune/mixed/policy_finetuned",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "finetuned_mixed-gap-constrained-all-loss-300k-50ms",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "finetuned_mixed-genet_gap-constrained-all-loss-300k-50ms",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/genet_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/output/sage-finetune/mixed/policy_finetuned",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "finetuned_mixed-genet_gap-constrained-all-loss-300k-50ms",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "finetuned_mixed-hotnets19-loss-300k-50ms",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/hotnets19-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/online_adv_20260321_hotnets19-loss_300k_50ms.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/output/sage-finetune/mixed/policy_finetuned",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "finetuned_mixed-hotnets19-loss-300k-50ms",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "finetuned_mixed-pgd_gap-constrained-all-loss-300k-50ms",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/pgd_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/output/sage-finetune/mixed/policy_finetuned",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "finetuned_mixed-pgd_gap-constrained-all-loss-300k-50ms",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "finetuned_mixed-random_gap-constrained-all-loss-300k-50ms",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/random_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/output/sage-finetune/mixed/policy_finetuned",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "finetuned_mixed-random_gap-constrained-all-loss-300k-50ms",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "finetuned_mixed_clean",
+      "args": [
+        "--test-manifest",
+        "inputs/attacks/train/manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260320_gap-constrained-all_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/output/sage-finetune/mixed/policy_finetuned",
+        "--clean-only-rollout",
+        "--wandb-name",
+        "finetuned_mixed_clean",
+        "--seed",
+        "42"
+      ],
+      "count": 48
+    },
+    {
+      "name": "gap-constrained-all-loss-300k-50ms_genet-trained",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/genet/gap-constrained-all-loss_50ms_300k/final_model",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "gap-constrained-all-loss-300k-50ms_genet-trained",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "gap-constrained-all-loss-300k-50ms_shield-predicate-random",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/random_gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "gap-constrained-all-loss-300k-50ms_shield-predicate-random",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "gap-constrained-all-loss_50ms_300k",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "gap-constrained-all-loss_50ms_300k",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "gap-constrained-all-loss_50ms_300k_shield-genet",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/genet_gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "gap-constrained-all-loss_50ms_300k_shield-genet",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "gap-constrained-all-loss_50ms_300k_shield-hotnets19",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/hotnets19-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "gap-constrained-all-loss_50ms_300k_shield-hotnets19",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "gap-constrained-all-loss_50ms_300k_shield-pgd",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/pgd_gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "gap-constrained-all-loss_50ms_300k_shield-pgd",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "gap-constrained-all-loss_50ms_300k_shield-predicate",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "gap-constrained-all-loss_50ms_300k_shield-predicate",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "genet-gap-constrained-all-loss-300k-50ms_genet-trained",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/genet_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/genet/gap-constrained-all-loss_50ms_300k/final_model",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "genet-gap-constrained-all-loss-300k-50ms_genet-trained",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "genet_gap-constrained-all-loss-300k-50ms_shield-predicate",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/genet_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "genet_gap-constrained-all-loss-300k-50ms_shield-predicate",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "genet_gap-constrained-all-loss-300k-50ms_shield-predicate-random",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/genet_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/random_gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "genet_gap-constrained-all-loss-300k-50ms_shield-predicate-random",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "genet_gap-constrained-all-loss_50ms_300k",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/genet_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "genet_gap-constrained-all-loss_50ms_300k",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "genet_gap-constrained-all-loss_50ms_300k_shield-genet",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/genet_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/genet_gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "genet_gap-constrained-all-loss_50ms_300k_shield-genet",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "genet_gap-constrained-all-loss_50ms_300k_shield-hotnets19",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/genet_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/hotnets19-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "genet_gap-constrained-all-loss_50ms_300k_shield-hotnets19",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "genet_gap-constrained-all-loss_50ms_300k_shield-pgd",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/genet_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/pgd_gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "genet_gap-constrained-all-loss_50ms_300k_shield-pgd",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "hotnets19-loss-300k-50ms_genet-trained",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/hotnets19-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/online_adv_20260321_hotnets19-loss_300k_50ms.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/genet/gap-constrained-all-loss_50ms_300k/final_model",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "hotnets19-loss-300k-50ms_genet-trained",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "hotnets19-loss-300k-50ms_shield-predicate",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/hotnets19-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/online_adv_20260321_hotnets19-loss_300k_50ms.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "hotnets19-loss-300k-50ms_shield-predicate",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "hotnets19-loss-300k-50ms_shield-predicate-50len",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/hotnets19-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/online_adv_20260321_hotnets19-loss_300k_50ms.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/gap-constrained-all-loss_50ms_300k-50len/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "hotnets19-loss-300k-50ms_shield-predicate-50len",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "hotnets19-loss-300k-50ms_shield-predicate-random",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/hotnets19-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/online_adv_20260321_hotnets19-loss_300k_50ms.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/random_gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "hotnets19-loss-300k-50ms_shield-predicate-random",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "hotnets19-loss_50ms_300k",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/hotnets19-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/online_adv_20260321_hotnets19-loss_300k_50ms.config.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "hotnets19-loss_50ms_300k",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "hotnets19-loss_50ms_300k_shield-genet",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/hotnets19-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/online_adv_20260321_hotnets19-loss_300k_50ms.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/genet_gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "hotnets19-loss_50ms_300k_shield-genet",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "hotnets19-loss_50ms_300k_shield-hotnets19",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/hotnets19-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/online_adv_20260321_hotnets19-loss_300k_50ms.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/hotnets19-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "hotnets19-loss_50ms_300k_shield-hotnets19",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "hotnets19-loss_50ms_300k_shield-pgd",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/hotnets19-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/online_adv_20260321_hotnets19-loss_300k_50ms.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/pgd_gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "hotnets19-loss_50ms_300k_shield-pgd",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "pgd-gap-constrained-all-loss-300k-50ms_genet-trained",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/pgd_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/genet/gap-constrained-all-loss_50ms_300k/final_model",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "pgd-gap-constrained-all-loss-300k-50ms_genet-trained",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "pgd_gap-constrained-all-loss-300k-50ms_shield-predicate",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/pgd_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "pgd_gap-constrained-all-loss-300k-50ms_shield-predicate",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "pgd_gap-constrained-all-loss-300k-50ms_shield-predicate-random",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/pgd_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/random_gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "pgd_gap-constrained-all-loss-300k-50ms_shield-predicate-random",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "pgd_gap-constrained-all-loss_50ms_300k",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/pgd_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "pgd_gap-constrained-all-loss_50ms_300k",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "pgd_gap-constrained-all-loss_50ms_300k_shield-genet",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/pgd_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/genet_gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "pgd_gap-constrained-all-loss_50ms_300k_shield-genet",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "pgd_gap-constrained-all-loss_50ms_300k_shield-hotnets19",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/pgd_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/hotnets19-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "pgd_gap-constrained-all-loss_50ms_300k_shield-hotnets19",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "pgd_gap-constrained-all-loss_50ms_300k_shield-pgd",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/pgd_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/pgd_gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "pgd_gap-constrained-all-loss_50ms_300k_shield-pgd",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "random-constrained-all-loss-300k-50ms",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/random_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "random-constrained-all-loss-300k-50ms",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "random-constrained-all-loss-300k-50ms_genet-trained",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/random_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--sage-eval-ckpt-dir",
+        "inputs/attacks/genet/gap-constrained-all-loss_50ms_300k/final_model",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "random-constrained-all-loss-300k-50ms_genet-trained",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "random-constrained-all-loss-300k-50ms_shield-predicate",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/random_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "random-constrained-all-loss-300k-50ms_shield-predicate",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "random-constrained-all-loss-300k-50ms_shield-predicate-random",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/random_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/random_gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "random-constrained-all-loss-300k-50ms_shield-predicate-random",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "random_gap-constrained-all-loss_50ms_300k_shield-genet",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/random_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/genet_gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "random_gap-constrained-all-loss_50ms_300k_shield-genet",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "random_gap-constrained-all-loss_50ms_300k_shield-hotnets19",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/random_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/hotnets19-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "random_gap-constrained-all-loss_50ms_300k_shield-hotnets19",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    },
+    {
+      "name": "random_gap-constrained-all-loss_50ms_300k_shield-pgd",
+      "args": [
+        "--generated-manifest",
+        "inputs/attacks/adv_traces/random_gap-constrained-all-loss_50ms_300k/generated_manifest.json",
+        "--config-path",
+        "inputs/attacks/models/gap_adv_20260321_gap-constrained-all-loss_50ms_300k.config.json",
+        "--shield-rules-file",
+        "inputs/attacks/output/shield-rules/pgd_gap-constrained-all-loss_50ms_300k/sage_directional_shield_rules.json",
+        "--skip-clean-rollout",
+        "--wandb-name",
+        "random_gap-constrained-all-loss_50ms_300k_shield-pgd",
+        "--seed",
+        "42"
+      ],
+      "count": 55
+    }
+  ]
+}

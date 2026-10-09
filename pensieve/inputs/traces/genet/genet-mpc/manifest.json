@@ -1,0 +1,30 @@
+{
+  "bandwidth_bounds_mbps": {
+    "max": 8.951518,
+    "min": 0.001
+  },
+  "best_params": {
+    "bw_change_interval": 1.0,
+    "max_bw_mbps": 5.102640565583759,
+    "min_bw_mbps": 5.102640565583759
+  },
+  "best_target": 14.80000000000004,
+  "bo_init_points": 10,
+  "bo_iter": 5,
+  "bw_change_interval": {
+    "bounds": {
+      "max": 100.0,
+      "min": 1.0
+    },
+    "mode": "fixed",
+    "value": 1.0
+  },
+  "duration_s": 330.0,
+  "episodes": 200,
+  "frozen_buffer_thresh_s": 60.0,
+  "frozen_link_rtt_ms": 80.0,
+  "kind": "genet_bo_trace_set",
+  "objective": "mpc_gap",
+  "seed": 42424,
+  "traces_per_eval": 10
+}

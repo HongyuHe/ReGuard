@@ -1,0 +1,4 @@
+#* Direct runtime dependencies for the local Genet-style generator.
+bayesian-optimization>=1.4,<2
+numpy>=1.24
+torch>=2

@@ -1,0 +1,16 @@
+[
+  "Implies((LoadProxy2 <= 723.5) & (MaxLoadProxy <= 23901.5) & (LoadProxyGapToMin7 > 18359.0) & (LoadProxyGapToMin9 > 56.5) & (LoadProxyPlusIncoming2 > 371.5) & (LoadProxyRank7 > 6.5), Eq(AllowServer6, 1))",
+  "Implies((LoadProxyGapToMin7 <= 18359.0) & (MaxLoadProxy <= 23901.5) & (LoadProxyGapToMin9 > 56.5) & (LoadProxyPlusIncoming2 > 371.5) & (LoadProxyRank7 > 6.5), Eq(AllowServer6, 1))",
+  "Implies((LoadProxyGapToMin8 <= 15083.5) & (LoadProxyPlusIncoming2 <= 4013.0) & (LoadProxyRank7 <= 5.5) & (LoadProxyRank7 <= 6.5) & (LoadProxyGapToMin9 > 56.5) & (LoadProxyPlusIncoming2 > 371.5) & (LoadProxyPlusIncoming2 > 3002.5), Eq(AllowServer6, 1))",
+  "Implies((LoadProxyGapToMin9 <= 56.5) & (TotalLoadProxy <= 33812.0) & (LoadProxy2 > 2057.0) & (LoadProxy7 > 15068.5) & (LoadProxy8 > 14082.5) & (LoadProxyGapToMin9 > 4.0), Eq(AllowServer6, 1))",
+  "Implies((LoadProxyGapToMin9 > 56.5) & (LoadProxyPlusIncoming2 > 371.5) & (LoadProxyPlusIncoming7 > 6937.5) & (LoadProxyPlusIncoming8 > 1968.5) & (LoadProxyRank3 > 1.5) & (LoadProxyRank7 > 6.5) & (MaxLoadProxy > 23901.5), Eq(AllowServer6, 1))",
+  "Implies((LoadProxyPlusIncoming2 <= 371.5) & (LoadProxyGapToMin8 > 408.5) & (LoadProxyGapToMin9 > 56.5) & (LoadProxyPlusIncoming7 > 702.5) & (LoadProxyRank9 > 6.5), Eq(AllowServer6, 1))",
+  "Implies((LoadProxyPlusIncoming2 <= 371.5) & (LoadProxyPlusIncoming7 <= 702.5) & (MaxLoadProxy <= 9699.5) & (LoadProxy1 > 974.5) & (LoadProxy9 > 657.5) & (LoadProxyGapToMin8 > 408.5) & (LoadProxyGapToMin9 > 56.5) & (LoadProxyRank9 > 6.5) & (StdLoadProxy > 2639.6982), Eq(AllowServer6, 1))",
+  "Implies((LoadProxyPlusIncoming2 <= 371.5) & (LoadProxyRank9 <= 6.5) & (LoadProxy7 > 519.5) & (LoadProxyGapToMin9 > 56.5), Eq(AllowServer6, 1))",
+  "Implies((LoadProxyPlusIncoming7 <= 6937.5) & (LoadProxyGapToMin9 > 56.5) & (LoadProxyPlusIncoming2 > 371.5) & (LoadProxyRank7 > 6.5) & (MaxLoadProxy > 23901.5), Eq(AllowServer6, 1))",
+  "Implies((LoadProxyRank3 <= 1.5) & (LoadProxyGapToMin9 > 56.5) & (LoadProxyPlusIncoming2 > 371.5) & (LoadProxyPlusIncoming7 > 6937.5) & (LoadProxyRank7 > 6.5) & (MaxLoadProxy > 23901.5), Eq(AllowServer6, 1))",
+  "Implies((LoadProxyRank5 <= 3.5) & (LoadProxyRank7 <= 6.5) & (LoadProxyGapToMin9 > 56.5) & (LoadProxyPlusIncoming2 > 371.5) & (LoadProxyRank7 > 5.5), Eq(AllowServer6, 1))",
+  "Implies((LoadProxyRank7 <= 5.5) & (LoadProxyRank7 <= 6.5) & (StdLoadProxy <= 7350.233) & (LoadProxyGapToMin8 > 15083.5) & (LoadProxyGapToMin8 > 20815.5) & (LoadProxyGapToMin9 > 56.5) & (LoadProxyPlusIncoming2 > 371.5) & (LoadProxyPlusIncoming2 > 3002.5) & (LoadProxyPlusIncoming9 > 4322.5), Eq(AllowServer6, 1))",
+  "Implies((LoadProxyRank7 <= 6.5) & (LoadProxy5 > 1115.5) & (LoadProxyGapToMin9 > 56.5) & (LoadProxyPlusIncoming2 > 371.5) & (LoadProxyRank5 > 3.5) & (LoadProxyRank7 > 5.5), Eq(AllowServer6, 1))",
+  "Implies((MaxLoadProxy <= 23901.5) & (LoadProxy2 > 723.5) & (LoadProxyGapToMin7 > 18359.0) & (LoadProxyGapToMin9 > 56.5) & (LoadProxyPlusIncoming2 > 371.5) & (LoadProxyRank7 > 6.5) & (LoadProxyRank8 > 6.5), Eq(AllowServer6, 1))"
+]

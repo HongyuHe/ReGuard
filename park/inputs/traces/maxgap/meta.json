@@ -1,0 +1,26 @@
+{
+  "episodes": 100,
+  "victim_checkpoint": "models/parklb_v1_350k.pt",
+  "attacker_model": "online/models/v2/win5-12m-nolastgap/best_model.zip",
+  "adv_model": "online/models/v2/win5-12m-nolastgap/best_model.zip",
+  "include_last_gap": false,
+  "seed": 42,
+  "episode_jobs": 1000,
+  "reference_window": 5,
+  "oracle_window": 5,
+  "deterministic": false,
+  "num_servers": 10,
+  "service_rates": null,
+  "obs_high": 500000.0,
+  "dt_min": 1.0,
+  "dt_max": 500.0,
+  "size_min": 10.0,
+  "size_max": 5000.0,
+  "first_job_size": 100,
+  "generation_mode": "pretrained_attacker_rollout",
+  "generation_caveats": [
+    "This script only rolls out a saved attacker policy and does not evaluate trace strength.",
+    "Gap computation is disabled during generation, so the optional last-gap feature remains zero.",
+    "reference_window is recorded for compatibility only and does not affect generated jobs in this mode."
+  ]
+}

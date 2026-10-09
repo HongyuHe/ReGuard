@@ -1,0 +1,11 @@
+[
+  "Implies((LoadProxy1 <= 679.5) & (LoadProxy7 <= 699.5) & (LoadProxyGapToMin2 <= 277.5) & (LoadProxyPlusIncoming5 <= 263.5) & (MeanLoadProxy <= 2499.0625) & (TotalLoadProxy <= 22562.5) & (LoadProxy7 > 157.5) & (LoadProxyGapToMin9 > 2130.0) & (LoadProxyRank9 > 7.5), Eq(AllowServer6, 1))",
+  "Implies((LoadProxy1 <= 679.5) & (LoadProxyGapToMin2 <= 277.5) & (MeanLoadProxy <= 2499.0625) & (LoadProxy7 > 699.5) & (LoadProxyGapToMin9 > 2130.0) & (LoadProxyRank9 > 7.5), Eq(AllowServer6, 1))",
+  "Implies((LoadProxy8 <= 20560.5) & (LoadProxy7 > 349.5) & (LoadProxyPlusIncoming6 > 126.5) & (LoadProxyRank9 > 7.5) & (MeanLoadProxy > 2499.0625), Eq(AllowServer6, 1))",
+  "Implies((LoadProxy8 <= 20560.5) & (LoadProxyPlusIncoming6 <= 126.5) & (LoadProxy7 > 349.5) & (LoadProxyRank9 > 7.5) & (MeanLoadProxy > 2499.0625), Eq(AllowServer6, 1))",
+  "Implies((LoadProxy9 <= 4131.0) & (LoadProxyPlusIncoming8 <= 22335.5) & (StdLoadProxy <= 6482.0225) & (LoadProxy8 > 20560.5) & (LoadProxyPlusIncoming0 > 176.5) & (LoadProxyPlusIncoming0 > 323.5) & (LoadProxyRank1 > 6.5) & (LoadProxyRank9 > 7.5) & (MeanLoadProxy > 2499.0625), Eq(AllowServer6, 1))",
+  "Implies((LoadProxyPlusIncoming8 <= 22335.5) & (LoadProxy8 > 20560.5) & (LoadProxyPlusIncoming0 > 176.5) & (LoadProxyPlusIncoming8 > 22166.5) & (LoadProxyRank1 > 6.5) & (LoadProxyRank9 > 7.5) & (MeanLoadProxy > 2499.0625) & (MeanLoadProxy > 2757.235) & (StdLoadProxy > 6482.0225), Eq(AllowServer6, 1))",
+  "Implies((LoadProxyRank1 <= 6.5) & (TotalLoadProxy <= 27668.5) & (LoadProxy8 > 20560.5) & (LoadProxyRank9 > 7.5) & (MeanLoadProxy > 2499.0625), Eq(AllowServer6, 1))",
+  "Implies((LoadProxyRank8 <= 6.5) & (LoadProxyRank9 <= 7.5) & (StdLoadProxy <= 1601.6656) & (LoadProxyPlusIncoming1 > 127.5) & (TotalLoadProxy > 6580.5), Eq(AllowServer6, 1))",
+  "Implies((MeanLoadProxy <= 2499.0625) & (LoadProxyGapToMin2 > 277.5) & (LoadProxyPlusIncoming7 > 372.5) & (LoadProxyRank9 > 7.5), Eq(AllowServer6, 1))"
+]

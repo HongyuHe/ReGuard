@@ -1,0 +1,295 @@
+
+from sage_rl.offline.offline_agent import make_networks
+import sysv_ipc
+from envwapper import TCP_dmEnv_Wrapper
+from acme.agents.tf import actors
+import sys
+from ruamel.yaml import YAML
+from acme import wrappers
+from acme.tf import utils as tf2_utils
+from acme import specs
+from acme.tf import networks
+import sonnet as snt
+import tensorflow as tf
+
+import numpy as np
+import csv
+import json
+import os
+import time
+from sage_rl.shield.runtime import maybe_build_shield_from_env
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
+
+# use cpu only for evaluation
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+tf.config.set_visible_devices([], 'GPU')
+
+yaml = YAML()
+
+
+def _open_controller_timing_log():
+    enabled = str(os.environ.get("SAGE_CONTROLLER_TIMING_LOG_ENABLED", "")).strip()
+    log_path = str(os.environ.get("SAGE_CONTROLLER_TIMING_LOG_PATH", "")).strip()
+    if enabled not in {"1", "true", "True"} and not log_path:
+        return None
+    if not log_path:
+        return None
+    os.makedirs(os.path.dirname(log_path) or ".", exist_ok=True)
+    return open(log_path, "w", encoding="utf-8")
+
+
+def _record_controller_timing(log_handle, payload):
+    if log_handle is None:
+        return
+    log_handle.write(json.dumps(payload, sort_keys=True) + "\n")
+    log_handle.flush()
+
+
+def _open_offline_dataset_log(obs_dim, actor_id):
+    log_path = str(os.environ.get("SAGE_OFFLINE_DATASET_LOG_PATH", "")).strip()
+    log_dir = str(os.environ.get("SAGE_OFFLINE_DATASET_LOG_DIR", "")).strip()
+    if not log_path and not log_dir:
+        return None, None
+    if not log_path:
+        log_path = os.path.join(log_dir, f"sage-offline-rollout-{actor_id}-pid{os.getpid()}.txt")
+    os.makedirs(os.path.dirname(log_path) or ".", exist_ok=True)
+    log_handle = open(log_path, "w", encoding="utf-8", newline="")
+    writer = csv.writer(log_handle)
+    writer.writerow([f"obs_{index}" for index in range(int(obs_dim))] + ["reward", "action", "discount"])
+    log_handle.flush()
+    return log_handle, writer
+
+
+def _record_offline_transition(log_handle, writer, observation, reward, action):
+    if log_handle is None or writer is None:
+        return
+    observation_values = np.asarray(observation, dtype=np.float32).reshape(-1)
+    action_values = np.asarray(action, dtype=np.float32).reshape(-1)
+    if observation_values.size == 0 or action_values.size == 0:
+        return
+    writer.writerow(
+        [float(value) for value in observation_values]
+        + [float(reward), float(action_values[0]), 1.0]
+    )
+    log_handle.flush()
+
+
+def run_evalcrr(args):
+
+    config_rl_module_path = os.path.dirname(os.path.realpath(__file__))
+
+    with open(os.path.join(config_rl_module_path, "config-rl-eval.yaml"), 'r') as fs:
+        config = yaml.load(fs)
+
+    try:
+        shrmem_r = sysv_ipc.SharedMemory(args.mem_r)
+        shrmem_w = sysv_ipc.SharedMemory(args.mem_w)
+    except:
+        shrmem_r = None
+        shrmem_w = None
+        sys.stderr.write("ISSUE WITH SHARED MEMORY ...\n")
+
+        return
+
+    # load env
+    env = TCP_dmEnv_Wrapper(config=config['tcpspec'], for_init_only=False, shrmem_r=shrmem_r,
+                            shrmem_w=shrmem_w, id=args.id, env_bw=args.bw, num_flows=args.flows)
+
+    env = wrappers.SinglePrecisionWrapper(env)
+    environment_spec = specs.make_environment_spec(env)
+
+    policy_network = None
+    controller_timing_log = _open_controller_timing_log()
+    offline_dataset_log, offline_dataset_writer = _open_offline_dataset_log(config['tcpspec']['obs_dim'], args.id)
+
+    try:
+        nw_type = config['nw_type']
+    except:
+        nw_type = config['offline_config']['type']
+
+    if nw_type in [1909] or config['offline_config']['use_offline_model']:
+        networks_dict = make_networks(environment_spec.actions,
+                                      vmin=config['offline_config']['vmin'], vmax=config['offline_config']['vmax'],
+                                      num_atoms=config['offline_config']['num_atoms'],
+                                      p_lstm_size=config['offline_config']['policy_lstm_size'],
+                                      c_lstm_size=config['offline_config']['critic_lstm_size'],
+                                      p_enc_size=config['offline_config']['p_enc_size'],
+                                      c_enc_size=config['offline_config']['c_enc_size'],
+                                      p_mlp_size=config['offline_config']['p_mlp_size'],
+                                      c_mlp_size=config['offline_config']['c_mlp_size'],
+                                      p_mlp_depth=config['offline_config']['p_mlp_depth'],
+                                      c_mlp_depth=config['offline_config']['c_mlp_depth'],
+                                      nw_type=config['offline_config']['type']
+                                      )
+    else:
+        raise ValueError("nw_type not supported")
+
+    policy_network = networks_dict['policy']
+    tf2_utils.create_variables(network=policy_network,
+                               input_spec=[environment_spec.observations])
+
+    
+
+    if config['offline_config']['use_offline_model']:
+        if config['offline_config']['load_ckpt_dir'] is not None:
+            load_path = config['offline_config']['load_ckpt_dir']
+            ckpt_override = str(os.environ.get("SAGE_EVAL_CKPT_DIR", "")).strip()
+            if ckpt_override:
+                load_path = os.path.expanduser(ckpt_override)
+                if not os.path.isabs(load_path):
+                    repo_root_guess = os.path.normpath(os.path.join(config_rl_module_path, "..", ".."))
+                    repo_relative_path = os.path.normpath(os.path.join(repo_root_guess, load_path))
+                    cwd_relative_path = os.path.normpath(os.path.abspath(load_path))
+                    if tf.train.latest_checkpoint(repo_relative_path) is not None:
+                        load_path = repo_relative_path
+                    else:
+                        load_path = cwd_relative_path
+            else:
+                load_path = os.path.normpath(
+                    os.path.join(config_rl_module_path, load_path))
+            print("Loading model from ckpt_dir: ", load_path)
+            assert tf.train.latest_checkpoint(
+                load_path) != None, "no checkpoint is loaded, please choose the ckpt directory"
+            checkpointer_rl = tf.train.Checkpoint(policy=policy_network)
+            checkpointer_rl.restore(
+                tf.train.latest_checkpoint(load_path)).expect_partial()
+    else:
+        raise ValueError("model not supported")
+
+    assert policy_network is not None, "no policy model is chosen, nw_type or set config['offline_config']['use_offline_model']=true in config"
+
+    eval_policy = snt.DeepRNN([
+        policy_network,
+        networks.StochasticMeanHead(),
+        networks.ClipToSpec(environment_spec.actions),
+    ])
+
+    actor = actors.RecurrentActor(policy_network=eval_policy)
+    shield = maybe_build_shield_from_env(tcpspec=config['tcpspec'])
+
+    iterations = np.int64(0)
+
+    agent_actions_list = []
+
+    
+
+    dummy_observation = np.float32(np.ones((config['tcpspec']['obs_dim'],)))
+    actor.select_action(dummy_observation)
+    actor._state = actor._network.initial_state(1)
+    actor._state = None
+
+    try:
+        timestep, _, _ = env.reset0()
+        timestep = env.reset()
+        actor.observe_first(timestep)
+
+    except Exception as e:
+        print(e)
+        print("================================ ERROR: TCP env has problem =============================")
+        if controller_timing_log is not None:
+            controller_timing_log.close()
+        if offline_dataset_log is not None:
+            offline_dataset_log.close()
+        return
+
+    # write 1st action
+    decision_index = 0
+    decision_started_at = time.perf_counter()
+    a = actor.select_action(timestep.observation)
+    policy_decision_ms = (time.perf_counter() - decision_started_at) * 1000.0
+    shield_decision_ms = 0.0
+    if shield is not None:
+        shield_started_at = time.perf_counter()
+        a, _shield_stats = shield.adjust_action(observation=timestep.observation, proposed_action=a)
+        shield_decision_ms = (time.perf_counter() - shield_started_at) * 1000.0
+    controller_decision_ms = (time.perf_counter() - decision_started_at) * 1000.0
+    _record_controller_timing(
+        controller_timing_log,
+        {
+            "decision_index": int(decision_index),
+            "first_action": 1,
+            "shield_enabled": 1 if shield is not None else 0,
+            "policy_decision_time_ms": float(policy_decision_ms),
+            "shield_decision_time_ms": float(shield_decision_ms),
+            "controller_decision_time_ms": float(controller_decision_ms),
+        },
+    )
+    decision_index += 1
+    env.write_action(a)
+    logged_observation = np.asarray(timestep.observation, dtype=np.float32).copy()
+
+    agent_actions_list.append(a)
+
+    def should_not_stop(iterations):
+        return True
+
+    episode_return = 0
+    actor_steps_taken = 0
+    num_episodes = 0
+    
+    return_report_period = config['tcpactor']['return_report_period']
+
+    while iterations < config['num_training_step']:
+        iterations += 1
+
+        next_timestep, _, error_code = env.step0(a, eval_=args.eval)
+        next_timestep = env.step(a)
+
+        if error_code == True:
+
+            actor.observe(action=a, next_timestep=next_timestep)
+            _record_offline_transition(
+                offline_dataset_log,
+                offline_dataset_writer,
+                logged_observation,
+                next_timestep.reward,
+                a,
+            )
+
+            decision_started_at = time.perf_counter()
+            a1 = actor.select_action(next_timestep.observation)
+            policy_decision_ms = (time.perf_counter() - decision_started_at) * 1000.0
+            shield_decision_ms = 0.0
+            if shield is not None:
+                shield_started_at = time.perf_counter()
+                a1, _shield_stats = shield.adjust_action(observation=next_timestep.observation, proposed_action=a1)
+                shield_decision_ms = (time.perf_counter() - shield_started_at) * 1000.0
+            controller_decision_ms = (time.perf_counter() - decision_started_at) * 1000.0
+            _record_controller_timing(
+                controller_timing_log,
+                {
+                    "decision_index": int(decision_index),
+                    "first_action": 0,
+                    "shield_enabled": 1 if shield is not None else 0,
+                    "policy_decision_time_ms": float(policy_decision_ms),
+                    "shield_decision_time_ms": float(shield_decision_ms),
+                    "controller_decision_time_ms": float(controller_decision_ms),
+                },
+            )
+            decision_index += 1
+
+            env.write_action(a1)
+            logged_observation = np.asarray(next_timestep.observation, dtype=np.float32).copy()
+
+            episode_return += next_timestep.reward
+            actor_steps_taken += 1
+
+            
+
+        else:
+            sys.stderr.write("Invalid state received...\n")
+            env.write_action(a)
+            continue
+
+        if iterations % return_report_period == 0:
+
+            episode_return = 0
+            num_episodes += 1
+
+        a = a1
+
+    if controller_timing_log is not None:
+        controller_timing_log.close()
+    if offline_dataset_log is not None:
+        offline_dataset_log.close()

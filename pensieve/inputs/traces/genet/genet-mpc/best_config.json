@@ -1,0 +1,16 @@
+{
+  "best_params": {
+    "bw_change_interval": 1.0,
+    "max_bw_mbps": 5.102640565583759,
+    "min_bw_mbps": 5.102640565583759
+  },
+  "best_raw_params": {
+    "bw_change_interval": 1.0,
+    "log_max_bw_mbps": -3.080488145329488,
+    "max_bw_mbps": 0.04593682732739393,
+    "min_bw_mbps": 5.102640565583759
+  },
+  "best_target": 14.80000000000004,
+  "bw_change_interval_source": "fixed",
+  "objective": "mpc_gap"
+}

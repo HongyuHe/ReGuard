@@ -1,0 +1,1 @@
+Equality(Mul(Integer(1000), Symbol('DelayMs'), Symbol('ThroughputMbps')), Mul(Integer(8), Symbol('ChosenChunkBytes')))

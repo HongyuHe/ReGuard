@@ -1,0 +1,8 @@
+[
+  "Implies((IncomingSize <= 1.5) & (LoadProxyGapToMin0 <= 289.5) & (LoadProxyRank5 <= 3.5) & (LoadProxy4 > 2.0), Eq(AllowServer5, 1))",
+  "Implies((IncomingSize <= 1.5) & (LoadProxyRank5 <= 3.5) & (LoadProxy4 > 2.0) & (LoadProxyGapToMin0 > 289.5) & (StdLoadProxy > 91.74029), Eq(AllowServer5, 1))",
+  "Implies((LoadProxy0 <= 252.5) & (LoadProxyRank1 <= 0.5) & (LoadProxyRank4 <= 8.5) & (LoadProxyGapToMin0 > 244.5) & (LoadProxyGapToMin0 > 247.5) & (LoadProxyRank5 > 3.5), Eq(AllowServer5, 1))",
+  "Implies((LoadProxy4 <= 2.0) & (LoadProxyPlusIncoming6 <= 1.5) & (LoadProxyRank5 <= 3.5) & (LoadProxy4 > 0.5), Eq(AllowServer5, 1))",
+  "Implies((LoadProxyPlusIncoming0 <= 1.5) & (LoadProxyRank5 <= 6.0) & (LoadProxyPlusIncoming4 > 106.0) & (LoadProxyRank4 > 8.5) & (LoadProxyRank5 > 3.5), Eq(AllowServer5, 1))",
+  "Implies((LoadProxyPlusIncoming4 <= 106.0) & (LoadProxyRank5 <= 6.0) & (LoadProxyRank4 > 8.5) & (LoadProxyRank5 > 3.5), Eq(AllowServer5, 1))"
+]

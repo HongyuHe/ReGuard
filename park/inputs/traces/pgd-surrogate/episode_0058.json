@@ -1,0 +1,267 @@
+{
+  "kind": "pgd_surrogate",
+  "num_jobs": 36,
+  "jobs": [
+    {
+      "arrival_time": 0,
+      "job_size": 151
+    },
+    {
+      "arrival_time": 1,
+      "job_size": 99
+    },
+    {
+      "arrival_time": 2,
+      "job_size": 54
+    },
+    {
+      "arrival_time": 3,
+      "job_size": 66
+    },
+    {
+      "arrival_time": 4,
+      "job_size": 70
+    },
+    {
+      "arrival_time": 5,
+      "job_size": 92
+    },
+    {
+      "arrival_time": 6,
+      "job_size": 51
+    },
+    {
+      "arrival_time": 7,
+      "job_size": 56
+    },
+    {
+      "arrival_time": 8,
+      "job_size": 51
+    },
+    {
+      "arrival_time": 9,
+      "job_size": 55
+    },
+    {
+      "arrival_time": 10,
+      "job_size": 61
+    },
+    {
+      "arrival_time": 11,
+      "job_size": 59
+    },
+    {
+      "arrival_time": 12,
+      "job_size": 51
+    },
+    {
+      "arrival_time": 13,
+      "job_size": 78
+    },
+    {
+      "arrival_time": 14,
+      "job_size": 66
+    },
+    {
+      "arrival_time": 15,
+      "job_size": 80
+    },
+    {
+      "arrival_time": 16,
+      "job_size": 84
+    },
+    {
+      "arrival_time": 17,
+      "job_size": 62
+    },
+    {
+      "arrival_time": 18,
+      "job_size": 82
+    },
+    {
+      "arrival_time": 19,
+      "job_size": 92
+    },
+    {
+      "arrival_time": 20,
+      "job_size": 100
+    },
+    {
+      "arrival_time": 21,
+      "job_size": 52
+    },
+    {
+      "arrival_time": 22,
+      "job_size": 51
+    },
+    {
+      "arrival_time": 23,
+      "job_size": 81
+    },
+    {
+      "arrival_time": 24,
+      "job_size": 86
+    },
+    {
+      "arrival_time": 25,
+      "job_size": 57
+    },
+    {
+      "arrival_time": 26,
+      "job_size": 51
+    },
+    {
+      "arrival_time": 27,
+      "job_size": 57
+    },
+    {
+      "arrival_time": 28,
+      "job_size": 62
+    },
+    {
+      "arrival_time": 29,
+      "job_size": 57
+    },
+    {
+      "arrival_time": 30,
+      "job_size": 62
+    },
+    {
+      "arrival_time": 31,
+      "job_size": 65
+    },
+    {
+      "arrival_time": 32,
+      "job_size": 57
+    },
+    {
+      "arrival_time": 33,
+      "job_size": 54
+    },
+    {
+      "arrival_time": 34,
+      "job_size": 67
+    },
+    {
+      "arrival_time": 35,
+      "job_size": 83
+    }
+  ],
+  "trace_id": "episode_0058",
+  "seed_trace_path": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/clean/rl1_trace_00018.csv",
+  "surrogate_checkpoint": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/pgd-surrogate/artifacts/surrogate_step_model.pt",
+  "attack_meta": {
+    "num_jobs": 36,
+    "windows": [
+      {
+        "start_step": 0,
+        "horizon": 5,
+        "best_gap": 0.0,
+        "best_info": {
+          "oracle_reward": -0.015,
+          "policy_reward": -0.015,
+          "oracle_policy_name": "least_completion_time",
+          "oracle_first_action": 9,
+          "iter_idx": 0,
+          "restart_idx": 0
+        }
+      },
+      {
+        "start_step": 5,
+        "horizon": 5,
+        "best_gap": 0.0,
+        "best_info": {
+          "oracle_reward": -0.04,
+          "policy_reward": -0.04,
+          "oracle_policy_name": "least_completion_time",
+          "oracle_first_action": 9,
+          "iter_idx": 0,
+          "restart_idx": 0
+        }
+      },
+      {
+        "start_step": 10,
+        "horizon": 5,
+        "best_gap": 0.0,
+        "best_info": {
+          "oracle_reward": -0.065,
+          "policy_reward": -0.065,
+          "oracle_policy_name": "least_backlog_time",
+          "oracle_first_action": 6,
+          "iter_idx": 0,
+          "restart_idx": 0
+        }
+      },
+      {
+        "start_step": 15,
+        "horizon": 5,
+        "best_gap": 0.0,
+        "best_info": {
+          "oracle_reward": -0.09000000000000001,
+          "policy_reward": -0.09000000000000001,
+          "oracle_policy_name": "least_backlog_time",
+          "oracle_first_action": 6,
+          "iter_idx": 0,
+          "restart_idx": 0
+        }
+      },
+      {
+        "start_step": 20,
+        "horizon": 5,
+        "best_gap": 0.0,
+        "best_info": {
+          "oracle_reward": -0.11499999999999999,
+          "policy_reward": -0.11499999999999999,
+          "oracle_policy_name": "least_backlog_time",
+          "oracle_first_action": 6,
+          "iter_idx": 0,
+          "restart_idx": 0
+        }
+      },
+      {
+        "start_step": 25,
+        "horizon": 5,
+        "best_gap": 0.0,
+        "best_info": {
+          "oracle_reward": -0.14,
+          "policy_reward": -0.14,
+          "oracle_policy_name": "least_backlog_time",
+          "oracle_first_action": 6,
+          "iter_idx": 0,
+          "restart_idx": 0
+        }
+      },
+      {
+        "start_step": 30,
+        "horizon": 5,
+        "best_gap": 0.0,
+        "best_info": {
+          "oracle_reward": -0.165,
+          "policy_reward": -0.165,
+          "oracle_policy_name": "least_backlog_time",
+          "oracle_first_action": 6,
+          "iter_idx": 0,
+          "restart_idx": 0
+        }
+      }
+    ],
+    "attack_config": {
+      "window_k": 5,
+      "stride": 5,
+      "iters": 20,
+      "restarts": 3,
+      "alpha": 0.05,
+      "dt_min": 1.0,
+      "dt_max": 11.0,
+      "size_min": 1.0,
+      "size_max": 2496194.0,
+      "dt_eps_abs": 50.0,
+      "dt_eps_rel": 0.5,
+      "size_eps_abs": 1000.0,
+      "size_eps_rel": 0.5,
+      "reward_weight": 1.0,
+      "backlog_weight": 0.05,
+      "active_weight": 0.05
+    }
+  }
+}

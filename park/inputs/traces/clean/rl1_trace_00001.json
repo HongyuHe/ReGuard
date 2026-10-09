@@ -1,0 +1,477 @@
+{
+  "workload_family": "rl1",
+  "num_jobs": 49,
+  "service_rate": 1.0323432892735898,
+  "job_interval_ms": 0.047513058198999314,
+  "queue_shuffled_probability": 0.15717280523760754,
+  "pareto_shape": 1.5,
+  "pareto_scale_bytes": 100.0,
+  "job_size_min_bytes": 100.0,
+  "job_size_max_bytes": 200.0,
+  "job_size_distribution": "truncated_pareto",
+  "trace_id": "rl1_trace_00001",
+  "arrival_process": "poisson",
+  "inter_arrival_distribution": "exponential",
+  "service_model": "identical_service_rates",
+  "service_rate_unit": "bytes_per_ms",
+  "job_interval": 0.047513058198999314,
+  "job_size_pareto_shape": 1.5,
+  "job_size_pareto_scale": 100.0,
+  "num_servers": 10,
+  "service_rates": [
+    1.0323432892735898,
+    1.0323432892735898,
+    1.0323432892735898,
+    1.0323432892735898,
+    1.0323432892735898,
+    1.0323432892735898,
+    1.0323432892735898,
+    1.0323432892735898,
+    1.0323432892735898,
+    1.0323432892735898
+  ],
+  "legacy_time_unit": "rounded_ms",
+  "jobs": [
+    {
+      "job_id": 0,
+      "arrival_time_ms": 0.0,
+      "dt_ms": 0.0,
+      "job_size_bytes": 128,
+      "arrival_time": 0,
+      "dt": 0,
+      "job_size": 128
+    },
+    {
+      "job_id": 1,
+      "arrival_time_ms": 0.025090247887881702,
+      "dt_ms": 0.025090247887881702,
+      "job_size_bytes": 117,
+      "arrival_time": 0,
+      "dt": 0,
+      "job_size": 117
+    },
+    {
+      "job_id": 2,
+      "arrival_time_ms": 0.0475307098427507,
+      "dt_ms": 0.022440461954868998,
+      "job_size_bytes": 125,
+      "arrival_time": 0,
+      "dt": 0,
+      "job_size": 125
+    },
+    {
+      "job_id": 3,
+      "arrival_time_ms": 0.048895356688626976,
+      "dt_ms": 0.0013646468458762767,
+      "job_size_bytes": 166,
+      "arrival_time": 0,
+      "dt": 0,
+      "job_size": 166
+    },
+    {
+      "job_id": 4,
+      "arrival_time_ms": 0.16813642662276618,
+      "dt_ms": 0.11924106993413922,
+      "job_size_bytes": 107,
+      "arrival_time": 0,
+      "dt": 0,
+      "job_size": 107
+    },
+    {
+      "job_id": 5,
+      "arrival_time_ms": 0.3298751194911538,
+      "dt_ms": 0.16173869286838763,
+      "job_size_bytes": 105,
+      "arrival_time": 0,
+      "dt": 0,
+      "job_size": 105
+    },
+    {
+      "job_id": 6,
+      "arrival_time_ms": 0.4621822433982635,
+      "dt_ms": 0.13230712390710972,
+      "job_size_bytes": 114,
+      "arrival_time": 0,
+      "dt": 0,
+      "job_size": 114
+    },
+    {
+      "job_id": 7,
+      "arrival_time_ms": 0.4939522422276412,
+      "dt_ms": 0.03176999882937772,
+      "job_size_bytes": 153,
+      "arrival_time": 0,
+      "dt": 0,
+      "job_size": 153
+    },
+    {
+      "job_id": 8,
+      "arrival_time_ms": 0.49998283395286214,
+      "dt_ms": 0.006030591725220899,
+      "job_size_bytes": 105,
+      "arrival_time": 0,
+      "dt": 0,
+      "job_size": 105
+    },
+    {
+      "job_id": 9,
+      "arrival_time_ms": 0.5637704759981179,
+      "dt_ms": 0.0637876420452558,
+      "job_size_bytes": 111,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 111
+    },
+    {
+      "job_id": 10,
+      "arrival_time_ms": 0.5774527562404648,
+      "dt_ms": 0.013682280242346806,
+      "job_size_bytes": 134,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 134
+    },
+    {
+      "job_id": 11,
+      "arrival_time_ms": 0.6130804728535285,
+      "dt_ms": 0.0356277166130637,
+      "job_size_bytes": 167,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 167
+    },
+    {
+      "job_id": 12,
+      "arrival_time_ms": 0.630105370889773,
+      "dt_ms": 0.017024898036244483,
+      "job_size_bytes": 117,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 117
+    },
+    {
+      "job_id": 13,
+      "arrival_time_ms": 0.6469337938816242,
+      "dt_ms": 0.01682842299185117,
+      "job_size_bytes": 115,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 115
+    },
+    {
+      "job_id": 14,
+      "arrival_time_ms": 0.748304908342161,
+      "dt_ms": 0.10137111446053682,
+      "job_size_bytes": 113,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 113
+    },
+    {
+      "job_id": 15,
+      "arrival_time_ms": 0.8119450990757173,
+      "dt_ms": 0.06364019073355635,
+      "job_size_bytes": 108,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 108
+    },
+    {
+      "job_id": 16,
+      "arrival_time_ms": 0.8207841953245244,
+      "dt_ms": 0.008839096248807072,
+      "job_size_bytes": 125,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 125
+    },
+    {
+      "job_id": 17,
+      "arrival_time_ms": 0.8881317443560063,
+      "dt_ms": 0.06734754903148184,
+      "job_size_bytes": 177,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 177
+    },
+    {
+      "job_id": 18,
+      "arrival_time_ms": 0.9445464506486709,
+      "dt_ms": 0.056414706292664624,
+      "job_size_bytes": 131,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 131
+    },
+    {
+      "job_id": 19,
+      "arrival_time_ms": 0.9964286172989033,
+      "dt_ms": 0.051882166650232375,
+      "job_size_bytes": 159,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 159
+    },
+    {
+      "job_id": 20,
+      "arrival_time_ms": 1.1305802665824372,
+      "dt_ms": 0.1341516492835339,
+      "job_size_bytes": 120,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 120
+    },
+    {
+      "job_id": 21,
+      "arrival_time_ms": 1.1348918360792435,
+      "dt_ms": 0.004311569496806367,
+      "job_size_bytes": 155,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 155
+    },
+    {
+      "job_id": 22,
+      "arrival_time_ms": 1.175097081182349,
+      "dt_ms": 0.040205245103105414,
+      "job_size_bytes": 186,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 186
+    },
+    {
+      "job_id": 23,
+      "arrival_time_ms": 1.2247232059575235,
+      "dt_ms": 0.04962612477517452,
+      "job_size_bytes": 106,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 106
+    },
+    {
+      "job_id": 24,
+      "arrival_time_ms": 1.2745742573995134,
+      "dt_ms": 0.04985105144198989,
+      "job_size_bytes": 107,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 107
+    },
+    {
+      "job_id": 25,
+      "arrival_time_ms": 1.2800447274930367,
+      "dt_ms": 0.005470470093523387,
+      "job_size_bytes": 139,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 139
+    },
+    {
+      "job_id": 26,
+      "arrival_time_ms": 1.4452019989865459,
+      "dt_ms": 0.16515727149350923,
+      "job_size_bytes": 109,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 109
+    },
+    {
+      "job_id": 27,
+      "arrival_time_ms": 1.4574646856509734,
+      "dt_ms": 0.012262686664427638,
+      "job_size_bytes": 159,
+      "arrival_time": 1,
+      "dt": 0,
+      "job_size": 159
+    },
+    {
+      "job_id": 28,
+      "arrival_time_ms": 1.555691014379748,
+      "dt_ms": 0.09822632872877449,
+      "job_size_bytes": 130,
+      "arrival_time": 2,
+      "dt": 0,
+      "job_size": 130
+    },
+    {
+      "job_id": 29,
+      "arrival_time_ms": 1.5650845877984594,
+      "dt_ms": 0.009393573418711403,
+      "job_size_bytes": 101,
+      "arrival_time": 2,
+      "dt": 0,
+      "job_size": 101
+    },
+    {
+      "job_id": 30,
+      "arrival_time_ms": 1.5858964245861717,
+      "dt_ms": 0.020811836787712368,
+      "job_size_bytes": 106,
+      "arrival_time": 2,
+      "dt": 0,
+      "job_size": 106
+    },
+    {
+      "job_id": 31,
+      "arrival_time_ms": 1.684127870812383,
+      "dt_ms": 0.09823144622621134,
+      "job_size_bytes": 106,
+      "arrival_time": 2,
+      "dt": 0,
+      "job_size": 106
+    },
+    {
+      "job_id": 32,
+      "arrival_time_ms": 1.7166383288232834,
+      "dt_ms": 0.03251045801090046,
+      "job_size_bytes": 149,
+      "arrival_time": 2,
+      "dt": 0,
+      "job_size": 149
+    },
+    {
+      "job_id": 33,
+      "arrival_time_ms": 1.8530010621330446,
+      "dt_ms": 0.13636273330976126,
+      "job_size_bytes": 110,
+      "arrival_time": 2,
+      "dt": 0,
+      "job_size": 110
+    },
+    {
+      "job_id": 34,
+      "arrival_time_ms": 1.9354732735287565,
+      "dt_ms": 0.08247221139571187,
+      "job_size_bytes": 151,
+      "arrival_time": 2,
+      "dt": 0,
+      "job_size": 151
+    },
+    {
+      "job_id": 35,
+      "arrival_time_ms": 2.0176718164722454,
+      "dt_ms": 0.08219854294348863,
+      "job_size_bytes": 106,
+      "arrival_time": 2,
+      "dt": 0,
+      "job_size": 106
+    },
+    {
+      "job_id": 36,
+      "arrival_time_ms": 2.0334826888297806,
+      "dt_ms": 0.015810872357535293,
+      "job_size_bytes": 184,
+      "arrival_time": 2,
+      "dt": 0,
+      "job_size": 184
+    },
+    {
+      "job_id": 37,
+      "arrival_time_ms": 2.0830814192829665,
+      "dt_ms": 0.049598730453185885,
+      "job_size_bytes": 116,
+      "arrival_time": 2,
+      "dt": 0,
+      "job_size": 116
+    },
+    {
+      "job_id": 38,
+      "arrival_time_ms": 2.1242314960610695,
+      "dt_ms": 0.04115007677810313,
+      "job_size_bytes": 145,
+      "arrival_time": 2,
+      "dt": 0,
+      "job_size": 145
+    },
+    {
+      "job_id": 39,
+      "arrival_time_ms": 2.17906524449112,
+      "dt_ms": 0.0548337484300502,
+      "job_size_bytes": 115,
+      "arrival_time": 2,
+      "dt": 0,
+      "job_size": 115
+    },
+    {
+      "job_id": 40,
+      "arrival_time_ms": 2.245524022503919,
+      "dt_ms": 0.06645877801279877,
+      "job_size_bytes": 101,
+      "arrival_time": 2,
+      "dt": 0,
+      "job_size": 101
+    },
+    {
+      "job_id": 41,
+      "arrival_time_ms": 2.3170283173676123,
+      "dt_ms": 0.07150429486369335,
+      "job_size_bytes": 142,
+      "arrival_time": 2,
+      "dt": 0,
+      "job_size": 142
+    },
+    {
+      "job_id": 42,
+      "arrival_time_ms": 2.3378705448166412,
+      "dt_ms": 0.020842227449028954,
+      "job_size_bytes": 107,
+      "arrival_time": 2,
+      "dt": 0,
+      "job_size": 107
+    },
+    {
+      "job_id": 43,
+      "arrival_time_ms": 2.3716340089049295,
+      "dt_ms": 0.0337634640882883,
+      "job_size_bytes": 192,
+      "arrival_time": 2,
+      "dt": 0,
+      "job_size": 192
+    },
+    {
+      "job_id": 44,
+      "arrival_time_ms": 2.3871198479576514,
+      "dt_ms": 0.015485839052721722,
+      "job_size_bytes": 185,
+      "arrival_time": 2,
+      "dt": 0,
+      "job_size": 185
+    },
+    {
+      "job_id": 45,
+      "arrival_time_ms": 2.5281888682175127,
+      "dt_ms": 0.14106902025986143,
+      "job_size_bytes": 127,
+      "arrival_time": 3,
+      "dt": 0,
+      "job_size": 127
+    },
+    {
+      "job_id": 46,
+      "arrival_time_ms": 2.732626732307304,
+      "dt_ms": 0.2044378640897911,
+      "job_size_bytes": 101,
+      "arrival_time": 3,
+      "dt": 0,
+      "job_size": 101
+    },
+    {
+      "job_id": 47,
+      "arrival_time_ms": 2.734393504218419,
+      "dt_ms": 0.0017667719111148917,
+      "job_size_bytes": 167,
+      "arrival_time": 3,
+      "dt": 0,
+      "job_size": 167
+    },
+    {
+      "job_id": 48,
+      "arrival_time_ms": 2.765057869204504,
+      "dt_ms": 0.030664364986084963,
+      "job_size_bytes": 111,
+      "arrival_time": 3,
+      "dt": 0,
+      "job_size": 111
+    }
+  ]
+}

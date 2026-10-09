@@ -1,0 +1,10 @@
+[
+  "Implies((LoadProxy7 <= 23901.5) & (LoadProxy9 <= 2246.5) & (LoadProxyGapToMin8 <= 2721.0) & (LoadProxyGapToMin9 <= 2290.5) & (LoadProxyPlusIncoming9 <= 9472.5) & (LoadProxyGapToMin9 > 1460.5), Eq(AllowServer8, 1))",
+  "Implies((LoadProxy8 <= 952.5) & (LoadProxyGapToMin9 <= 1460.5) & (LoadProxyPlusIncoming9 <= 9472.5) & (LoadProxyPlusIncoming7 > 37680.5), Eq(AllowServer8, 1))",
+  "Implies((LoadProxy9 <= 2246.5) & (LoadProxyGapToMin9 <= 2290.5) & (LoadProxyPlusIncoming9 <= 9472.5) & (LoadProxy7 > 23901.5) & (LoadProxyGapToMin9 > 1460.5), Eq(AllowServer8, 1))",
+  "Implies((LoadProxyGapToMin1 <= 304.5) & (LoadProxyGapToMin9 <= 1460.5) & (LoadProxyPlusIncoming7 <= 37680.5) & (LoadProxyPlusIncoming9 <= 9472.5) & (LoadProxyPlusIncoming9 > 5037.5), Eq(AllowServer8, 1))",
+  "Implies((LoadProxyGapToMin8 <= 868.5) & (LoadProxyGapToMin9 <= 1460.5) & (LoadProxyPlusIncoming7 <= 37680.5) & (LoadProxyPlusIncoming9 <= 5037.5) & (LoadProxyPlusIncoming9 <= 9472.5) & (LoadProxyGapToMin9 > 45.5), Eq(AllowServer8, 1))",
+  "Implies((LoadProxyGapToMin9 <= 2290.5) & (LoadProxyPlusIncoming9 <= 9472.5) & (LoadProxy9 > 2246.5) & (LoadProxyGapToMin9 > 1460.5), Eq(AllowServer8, 1))",
+  "Implies((LoadProxyPlusIncoming1 <= 582.5) & (LoadProxyPlusIncoming8 <= 316.5) & (LoadProxyPlusIncoming9 > 9472.5), Eq(AllowServer8, 1))",
+  "Implies((LoadProxyPlusIncoming8 <= 418.5) & (LoadProxyPlusIncoming9 <= 9472.5) & (LoadProxyGapToMin9 > 1460.5) & (LoadProxyGapToMin9 > 2290.5), Eq(AllowServer8, 1))"
+]

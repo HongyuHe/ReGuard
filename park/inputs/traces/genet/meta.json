@@ -1,0 +1,55 @@
+{
+  "generation_mode": "genet_first_iteration",
+  "model": "/Users/hongyu/Projects/Formal/park-load-balance-torch/models/parklb_v1_350k.pt",
+  "objective": "reference_gap_per_job",
+  "reference_window": 5,
+  "seed": 42,
+  "search_space": {
+    "num_jobs": 1000,
+    "base_dt_ms_range": [
+      10.0,
+      120.0
+    ],
+    "base_size_scale_bytes_range": [
+      40.0,
+      400.0
+    ],
+    "pareto_shape_range": [
+      1.1,
+      2.5
+    ],
+    "burst_start_frac_range": [
+      0.05,
+      0.8
+    ],
+    "burst_duration_frac_range": [
+      0.05,
+      0.4
+    ],
+    "burst_dt_multiplier_range": [
+      0.05,
+      0.8
+    ],
+    "burst_size_multiplier_range": [
+      1.0,
+      12.0
+    ]
+  },
+  "export_traces": 100,
+  "traces_per_eval": 5,
+  "bo_init_points": 8,
+  "bo_iter": 12,
+  "candidate_pool_size": 1024,
+  "best_target": 162.49840879999994,
+  "best_eval_id": 16,
+  "best_params": {
+    "num_jobs": 1000,
+    "base_dt_ms": 10.000000000000002,
+    "base_size_scale_bytes": 147.09788714900353,
+    "pareto_shape": 1.1,
+    "burst_start_frac": 0.5618140883351506,
+    "burst_duration_frac": 0.2835477811832138,
+    "burst_dt_multiplier": 0.48131531854122855,
+    "burst_size_multiplier": 3.5052782203477233
+  }
+}

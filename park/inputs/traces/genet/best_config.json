@@ -1,0 +1,137 @@
+{
+  "best_eval_id": 16,
+  "best_target": 162.49840879999994,
+  "objective": "reference_gap_per_job",
+  "params": {
+    "base_dt_ms": 10.000000000000002,
+    "base_size_scale_bytes": 147.09788714900353,
+    "burst_dt_multiplier": 0.48131531854122855,
+    "burst_duration_frac": 0.2835477811832138,
+    "burst_size_multiplier": 3.5052782203477233,
+    "burst_start_frac": 0.5618140883351506,
+    "num_jobs": 1000,
+    "pareto_shape": 1.1
+  },
+  "raw_vector": [
+    0.0,
+    0.5655464434245926,
+    0.0,
+    0.6824187844468674,
+    0.6672793748091822,
+    0.8167455849612556,
+    0.5047553378207893
+  ],
+  "search_space": {
+    "base_dt_ms_range": [
+      10.0,
+      120.0
+    ],
+    "base_size_scale_bytes_range": [
+      40.0,
+      400.0
+    ],
+    "burst_dt_multiplier_range": [
+      0.05,
+      0.8
+    ],
+    "burst_duration_frac_range": [
+      0.05,
+      0.4
+    ],
+    "burst_size_multiplier_range": [
+      1.0,
+      12.0
+    ],
+    "burst_start_frac_range": [
+      0.05,
+      0.8
+    ],
+    "num_jobs": 1000,
+    "pareto_shape_range": [
+      1.1,
+      2.5
+    ]
+  },
+  "trace_rows": [
+    {
+      "dominant_reference_policy": "least_queue_size",
+      "gap_per_job": -6.144505000000295,
+      "gap_total": -6144.505000000296,
+      "objective_value": -6.144505000000295,
+      "reference_policy_histogram": {
+        "least_active_jobs": 469,
+        "least_backlog_time": 16,
+        "least_completion_time": 5,
+        "least_queue_size": 510
+      },
+      "regret_mean": 26.395582999998762,
+      "regret_p95": 0.0,
+      "trace_idx": 0,
+      "trace_seed": 160042
+    },
+    {
+      "dominant_reference_policy": "least_queue_size",
+      "gap_per_job": 120.23586800000011,
+      "gap_total": 120235.8680000001,
+      "objective_value": 120.23586800000011,
+      "reference_policy_histogram": {
+        "least_active_jobs": 239,
+        "least_backlog_time": 11,
+        "least_completion_time": 17,
+        "least_queue_size": 733
+      },
+      "regret_mean": 10.11505100000018,
+      "regret_p95": 0.0,
+      "trace_idx": 1,
+      "trace_seed": 160043
+    },
+    {
+      "dominant_reference_policy": "least_queue_size",
+      "gap_per_job": 290.24919799999975,
+      "gap_total": 290249.19799999974,
+      "objective_value": 290.24919799999975,
+      "reference_policy_histogram": {
+        "least_active_jobs": 375,
+        "least_backlog_time": 17,
+        "least_completion_time": 7,
+        "least_queue_size": 601
+      },
+      "regret_mean": 13.848763000000094,
+      "regret_p95": 0.0,
+      "trace_idx": 2,
+      "trace_seed": 160044
+    },
+    {
+      "dominant_reference_policy": "least_queue_size",
+      "gap_per_job": 210.18667299999996,
+      "gap_total": 210186.67299999995,
+      "objective_value": 210.18667299999996,
+      "reference_policy_histogram": {
+        "least_active_jobs": 200,
+        "least_backlog_time": 10,
+        "least_completion_time": 7,
+        "least_queue_size": 783
+      },
+      "regret_mean": 11.16017000000074,
+      "regret_p95": 0.0,
+      "trace_idx": 3,
+      "trace_seed": 160045
+    },
+    {
+      "dominant_reference_policy": "least_queue_size",
+      "gap_per_job": 197.96481,
+      "gap_total": 197964.81,
+      "objective_value": 197.96481,
+      "reference_policy_histogram": {
+        "least_active_jobs": 283,
+        "least_backlog_time": 17,
+        "least_completion_time": 12,
+        "least_queue_size": 688
+      },
+      "regret_mean": 49.05530399999994,
+      "regret_p95": 0.0,
+      "trace_idx": 4,
+      "trace_seed": 160046
+    }
+  ]
+}

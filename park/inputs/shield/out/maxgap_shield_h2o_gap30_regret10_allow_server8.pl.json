@@ -1,0 +1,5 @@
+[
+  "Implies((LoadProxy6 <= 10.0) & (LoadProxy2 > 536.5) & (LoadProxy6 > 4.0), Eq(AllowServer8, 1))",
+  "Implies((LoadProxy6 <= 4.0) & (LoadProxyPlusIncoming1 <= 635.5) & (LoadProxy2 > 536.5) & (LoadProxyGapToMin9 > 48.5) & (LoadProxyPlusIncoming3 > 321.5), Eq(AllowServer8, 1))",
+  "Implies((LoadProxy6 <= 4.0) & (LoadProxyPlusIncoming1 <= 635.5) & (LoadProxyPlusIncoming3 <= 321.5) & (LoadProxy2 > 536.5) & (LoadProxyGapToMin9 > 48.5) & (LoadProxyPlusIncoming2 > 1323.0), Eq(AllowServer8, 1))"
+]

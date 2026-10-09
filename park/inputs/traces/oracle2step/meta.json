@@ -1,0 +1,28 @@
+{
+  "victim_checkpoint": "/Users/hongyu/Projects/Formal/park-load-balance-torch/models/parklb_v1_350k.pt",
+  "attacker_victim_checkpoint": "/Users/hongyu/Projects/Formal/park-load-balance-torch/models/parklb_v1_350k.pt",
+  "adv_model": "/Users/hongyu/Projects/Formal/park-load-balance-torch/online/models/parklb_v1_350k-attacker_win2oracle_best.zip",
+  "episodes_generated": 200,
+  "episodes_evaluated": 100,
+  "episode_jobs": 1000,
+  "oracle_k": 2,
+  "deterministic": false,
+  "trace_out_dir": "/Users/hongyu/Projects/Formal/park-load-balance-torch/traces/maxgap",
+  "metrics_out_dir": "/Users/hongyu/Projects/Formal/park-load-balance-torch/online/eval/maxgap",
+  "include_last_gap": true,
+  "service_rates": [
+    0.15,
+    0.25,
+    0.35,
+    0.45,
+    0.55,
+    0.65,
+    0.75,
+    0.85,
+    0.95,
+    1.05
+  ],
+  "obs_high": 500000.0,
+  "reward_time_scale": 1000.0,
+  "seed": 42
+}

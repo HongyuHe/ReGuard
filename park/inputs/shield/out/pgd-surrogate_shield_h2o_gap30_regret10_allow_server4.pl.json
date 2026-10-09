@@ -1,0 +1,9 @@
+[
+  "Implies((LoadProxy0 <= 212.5) & (LoadProxyGapToMin3 <= 4.5) & (LoadProxyGapToMin5 <= 2.5) & (LoadProxyPlusIncoming4 <= 1.5) & (LoadProxyPlusIncoming4 <= 3.0) & (LoadProxyPlusIncoming6 <= 1.5) & (TotalLoadProxy <= 11.5) & (LoadProxyPlusIncoming3 > 5.0), Eq(AllowServer4, 1))",
+  "Implies((LoadProxy0 <= 212.5) & (LoadProxyPlusIncoming3 <= 5.0) & (LoadProxyPlusIncoming4 <= 1.5) & (LoadProxyPlusIncoming4 <= 3.0) & (LoadProxyPlusIncoming6 <= 1.5), Eq(AllowServer4, 1))",
+  "Implies((LoadProxy0 <= 212.5) & (LoadProxyPlusIncoming4 <= 1.5) & (LoadProxyPlusIncoming4 <= 3.0) & (LoadProxyPlusIncoming6 <= 1.5) & (LoadProxyPlusIncoming3 > 5.0) & (TotalLoadProxy > 11.5), Eq(AllowServer4, 1))",
+  "Implies((LoadProxy0 <= 212.5) & (LoadProxyPlusIncoming4 <= 1.5) & (LoadProxyPlusIncoming4 <= 3.0) & (LoadProxyPlusIncoming6 <= 1.5) & (TotalLoadProxy <= 11.5) & (LoadProxyGapToMin3 > 4.5) & (LoadProxyPlusIncoming3 > 5.0), Eq(AllowServer4, 1))",
+  "Implies((LoadProxy0 <= 241.0) & (LoadProxyPlusIncoming0 <= 252.5) & (LoadProxyPlusIncoming3 <= 3.0) & (LoadProxyPlusIncoming4 <= 1.5) & (LoadProxyPlusIncoming4 <= 3.0) & (LoadProxyPlusIncoming6 <= 1.5) & (LoadProxy0 > 212.5) & (LoadProxy0 > 224.0), Eq(AllowServer4, 1))",
+  "Implies((LoadProxyPlusIncoming3 <= 3.0) & (LoadProxyPlusIncoming4 <= 1.5) & (LoadProxyPlusIncoming4 <= 3.0) & (LoadProxyPlusIncoming6 <= 1.5) & (LoadProxy0 > 212.5) & (LoadProxy0 > 224.0) & (LoadProxyPlusIncoming0 > 252.5), Eq(AllowServer4, 1))",
+  "Implies((LoadProxyPlusIncoming4 <= 1.5) & (LoadProxyPlusIncoming4 <= 3.0) & (LoadProxyPlusIncoming6 <= 1.5) & (LoadProxy0 > 212.5) & (LoadProxyPlusIncoming3 > 3.0), Eq(AllowServer4, 1))"
+]

@@ -1,0 +1,833 @@
+{
+  "framework": "park",
+  "source": "park-load-balance-torch/scripts/eval_trace_dir_oracle_regret.py command records",
+  "cases": [
+    {
+      "name": "maxgap",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/maxgap",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "random",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/random",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "clean",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/clean",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "pgd-surrogate",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/pgd-surrogate",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "genet",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/genet",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "oracle2step",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/oracle2step",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "maxgap_shield",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/maxgap",
+        "--shield-rules-prefix",
+        "inputs/shield/out/maxgap_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "genet_shield",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/genet",
+        "--shield-rules-prefix",
+        "inputs/shield/out/maxgap_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "pgd-surrogate_shield",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/pgd-surrogate",
+        "--shield-rules-prefix",
+        "inputs/shield/out/maxgap_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "random_shield",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/random",
+        "--shield-rules-prefix",
+        "inputs/shield/out/maxgap_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "oracle2step_shield",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/oracle2step",
+        "--shield-rules-prefix",
+        "inputs/shield/out/maxgap_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "clean_shield",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/clean",
+        "--shield-rules-prefix",
+        "inputs/shield/out/maxgap_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "maxgap_shield-random",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/maxgap",
+        "--shield-rules-prefix",
+        "inputs/shield/out/random_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "genet_shield-random",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/genet",
+        "--shield-rules-prefix",
+        "inputs/shield/out/random_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "pgd-surrogate_shield-random",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/pgd-surrogate",
+        "--shield-rules-prefix",
+        "inputs/shield/out/random_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "random_shield-random",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/random",
+        "--shield-rules-prefix",
+        "inputs/shield/out/random_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "clean_shield-random",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/clean",
+        "--shield-rules-prefix",
+        "inputs/shield/out/random_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "oracle2step_shield-random",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/oracle2step",
+        "--shield-rules-prefix",
+        "inputs/shield/out/random_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "maxgap_shield-pgd-surrogate",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/maxgap",
+        "--shield-rules-prefix",
+        "inputs/shield/out/pgd-surrogate_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "genet_shield-pgd-surrogate",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/genet",
+        "--shield-rules-prefix",
+        "inputs/shield/out/pgd-surrogate_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "pgd-surrogate_shield-pgd-surrogate",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/pgd-surrogate",
+        "--shield-rules-prefix",
+        "inputs/shield/out/pgd-surrogate_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "random_shield-pgd-surrogate",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/random",
+        "--shield-rules-prefix",
+        "inputs/shield/out/pgd-surrogate_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "clean_shield-pgd-surrogate",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/clean",
+        "--shield-rules-prefix",
+        "inputs/shield/out/pgd-surrogate_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "oracle2step_shield-pgd-surrogate",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/oracle2step",
+        "--shield-rules-prefix",
+        "inputs/shield/out/pgd-surrogate_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "maxgap_shield-genet",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/maxgap",
+        "--shield-rules-prefix",
+        "inputs/shield/out/genet_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "genet_shield-genet",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/genet",
+        "--shield-rules-prefix",
+        "inputs/shield/out/genet_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "pgd-surrogate_shield-genet",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/pgd-surrogate",
+        "--shield-rules-prefix",
+        "inputs/shield/out/genet_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "random_shield-genet",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/random",
+        "--shield-rules-prefix",
+        "inputs/shield/out/genet_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "clean_shield-genet",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/clean",
+        "--shield-rules-prefix",
+        "inputs/shield/out/genet_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "oracle2step_shield-genet",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/oracle2step",
+        "--shield-rules-prefix",
+        "inputs/shield/out/genet_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "maxgap_shield-oracle2step",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/maxgap",
+        "--shield-rules-prefix",
+        "inputs/shield/out/oracle2step_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "genet_shield-oracle2step",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/genet",
+        "--shield-rules-prefix",
+        "inputs/shield/out/oracle2step_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "pgd-surrogate_shield-oracle2step",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/pgd-surrogate",
+        "--shield-rules-prefix",
+        "inputs/shield/out/oracle2step_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "random_shield-oracle2step",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/random",
+        "--shield-rules-prefix",
+        "inputs/shield/out/oracle2step_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "clean_shield-oracle2step",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/clean",
+        "--shield-rules-prefix",
+        "inputs/shield/out/oracle2step_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "oracle2step_shield-oracle2step",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k.pt",
+        "--trace-dir",
+        "inputs/traces/oracle2step",
+        "--shield-rules-prefix",
+        "inputs/shield/out/oracle2step_shield_h2o_gap30_regret10",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "maxgap_genet",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_genet.pt",
+        "--trace-dir",
+        "inputs/traces/maxgap",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "random_genet",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_genet.pt",
+        "--trace-dir",
+        "inputs/traces/random",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "clean_genet",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_genet.pt",
+        "--trace-dir",
+        "inputs/traces/clean",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "genet_genet",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_genet.pt",
+        "--trace-dir",
+        "inputs/traces/genet",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "pgd-surrogate_genet",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_genet.pt",
+        "--trace-dir",
+        "inputs/traces/pgd-surrogate",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "oracle2step_genet",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_genet.pt",
+        "--trace-dir",
+        "inputs/traces/oracle2step",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "maxgap_finetune",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_finetune-maxgap.pt",
+        "--trace-dir",
+        "inputs/traces/maxgap",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "genet_finetune",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_finetune-genet.pt",
+        "--trace-dir",
+        "inputs/traces/genet",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "clean_finetune",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_finetune-clean.pt",
+        "--trace-dir",
+        "inputs/traces/clean",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "pgd-surrogate_finetune",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_finetune-pgd.pt",
+        "--trace-dir",
+        "inputs/traces/pgd-surrogate",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "random_finetune",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_finetune-random.pt",
+        "--trace-dir",
+        "inputs/traces/random",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "oracle2step_finetune",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_finetune-oracle2step.pt",
+        "--trace-dir",
+        "inputs/traces/oracle2step",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "maxgap_finetune-clean",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_finetune-maxgap.pt",
+        "--trace-dir",
+        "inputs/traces/clean",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "genet_finetune-clean",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_finetune-genet.pt",
+        "--trace-dir",
+        "inputs/traces/clean",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "pgd-surrogate_finetune-clean",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_finetune-pgd.pt",
+        "--trace-dir",
+        "inputs/traces/clean",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "random_finetune-clean",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_finetune-random.pt",
+        "--trace-dir",
+        "inputs/traces/clean",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "oracle2step_finetune-clean",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_finetune-oracle2step.pt",
+        "--trace-dir",
+        "inputs/traces/clean",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "maxgap_finetune-mix",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_finetune-mix.pt",
+        "--trace-dir",
+        "inputs/traces/maxgap",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "genet_finetune-mix",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_finetune-mix.pt",
+        "--trace-dir",
+        "inputs/traces/genet",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "clean_finetune-mix",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_finetune-mix.pt",
+        "--trace-dir",
+        "inputs/traces/clean",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "pgd-surrogate_finetune-mix",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_finetune-mix.pt",
+        "--trace-dir",
+        "inputs/traces/pgd-surrogate",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "random_finetune-mix",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_finetune-mix.pt",
+        "--trace-dir",
+        "inputs/traces/random",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    },
+    {
+      "name": "oracle2step_finetune-mix",
+      "args": [
+        "--victim-checkpoint",
+        "inputs/models/parklb_v1_350k_finetune-mix.pt",
+        "--trace-dir",
+        "inputs/traces/oracle2step",
+        "--reference-window",
+        "5",
+        "--no-wandb"
+      ],
+      "count": 100
+    }
+  ]
+}

@@ -1,0 +1,1163 @@
+{
+  "attack_alpha": 0.05,
+  "attack_eps_abs": 0.5,
+  "attack_eps_rel": 0.0,
+  "attack_min_bw": 0.05,
+  "attack_random_start": false,
+  "attack_steps": 20,
+  "delta_linf_abs_max": 0.5000002384185791,
+  "delta_linf_abs_mean": 0.5000001192092896,
+  "delta_linf_rel_max": 2.2074134349823,
+  "delta_linf_rel_mean": 1.261289358139038,
+  "num_traces": 142,
+  "per_trace": [
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 0.9082165956497192,
+      "pred_adv": 7.319872856140137,
+      "pred_clean": 6.687089920043945,
+      "pred_gain": 0.6327829360961914,
+      "trace_name": "norway_bus_1"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 0.9055730700492859,
+      "pred_adv": 9.546073913574219,
+      "pred_clean": 6.927155494689941,
+      "pred_gain": 2.6189184188842773,
+      "trace_name": "norway_bus_10"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 1.3005765676498413,
+      "pred_adv": 8.862278938293457,
+      "pred_clean": 6.925498962402344,
+      "pred_gain": 1.9367799758911133,
+      "trace_name": "norway_bus_11"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 1.6716163158416748,
+      "pred_adv": 15.055500984191895,
+      "pred_clean": 11.629209518432617,
+      "pred_gain": 3.4262914657592773,
+      "trace_name": "norway_bus_12"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 1.8259704113006592,
+      "pred_adv": 22.04600715637207,
+      "pred_clean": 14.389787673950195,
+      "pred_gain": 7.656219482421875,
+      "trace_name": "norway_bus_13"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 1.7069615125656128,
+      "pred_adv": 23.792400360107422,
+      "pred_clean": 19.20710563659668,
+      "pred_gain": 4.585294723510742,
+      "trace_name": "norway_bus_14"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 0.18545261025428772,
+      "pred_adv": 5.21644926071167,
+      "pred_clean": 4.923962593078613,
+      "pred_gain": 0.29248666763305664,
+      "trace_name": "norway_bus_15"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 0.18693438172340393,
+      "pred_adv": 4.993951320648193,
+      "pred_clean": 4.7256855964660645,
+      "pred_gain": 0.2682657241821289,
+      "trace_name": "norway_bus_16"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 0.9011163711547852,
+      "pred_adv": 7.267275810241699,
+      "pred_clean": 6.4111199378967285,
+      "pred_gain": 0.8561558723449707,
+      "trace_name": "norway_bus_17"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 0.9064884185791016,
+      "pred_adv": 13.995272636413574,
+      "pred_clean": 8.38381576538086,
+      "pred_gain": 5.611456871032715,
+      "trace_name": "norway_bus_18"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 0.8895207643508911,
+      "pred_adv": 10.415040969848633,
+      "pred_clean": 6.588968753814697,
+      "pred_gain": 3.8260722160339355,
+      "trace_name": "norway_bus_19"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 0.6908144354820251,
+      "pred_adv": 16.16005516052246,
+      "pred_clean": 9.013179779052734,
+      "pred_gain": 7.146875381469727,
+      "trace_name": "norway_bus_2"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 0.9046983122825623,
+      "pred_adv": 21.64307403564453,
+      "pred_clean": 11.97964859008789,
+      "pred_gain": 9.66342544555664,
+      "trace_name": "norway_bus_20"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 0.9081453084945679,
+      "pred_adv": 11.578453063964844,
+      "pred_clean": 7.354706764221191,
+      "pred_gain": 4.223746299743652,
+      "trace_name": "norway_bus_21"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 0.907133936882019,
+      "pred_adv": 14.652947425842285,
+      "pred_clean": 10.78665828704834,
+      "pred_gain": 3.8662891387939453,
+      "trace_name": "norway_bus_22"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 1.3598613739013672,
+      "pred_adv": 14.053348541259766,
+      "pred_clean": 9.715067863464355,
+      "pred_gain": 4.33828067779541,
+      "trace_name": "norway_bus_23"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 0.9063954949378967,
+      "pred_adv": 8.468671798706055,
+      "pred_clean": 6.368486404418945,
+      "pred_gain": 2.1001853942871094,
+      "trace_name": "norway_bus_3"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 0.9016527533531189,
+      "pred_adv": 18.963743209838867,
+      "pred_clean": 10.208778381347656,
+      "pred_gain": 8.754964828491211,
+      "trace_name": "norway_bus_4"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 0.9074888825416565,
+      "pred_adv": 13.877171516418457,
+      "pred_clean": 9.629410743713379,
+      "pred_gain": 4.247760772705078,
+      "trace_name": "norway_bus_5"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 0.9086841940879822,
+      "pred_adv": 20.523500442504883,
+      "pred_clean": 15.730731964111328,
+      "pred_gain": 4.792768478393555,
+      "trace_name": "norway_bus_6"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 0.8961379528045654,
+      "pred_adv": 8.268646240234375,
+      "pred_clean": 6.978058338165283,
+      "pred_gain": 1.2905879020690918,
+      "trace_name": "norway_bus_7"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 0.9074587821960449,
+      "pred_adv": 18.606592178344727,
+      "pred_clean": 12.301647186279297,
+      "pred_gain": 6.30494499206543,
+      "trace_name": "norway_bus_8"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 0.8977742195129395,
+      "pred_adv": 8.94729232788086,
+      "pred_clean": 6.859735012054443,
+      "pred_gain": 2.087557315826416,
+      "trace_name": "norway_bus_9"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 1.0631413459777832,
+      "pred_adv": 7.277137279510498,
+      "pred_clean": 6.134786128997803,
+      "pred_gain": 1.1423511505126953,
+      "trace_name": "norway_car_1"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 0.9947099685668945,
+      "pred_adv": 8.243876457214355,
+      "pred_clean": 6.667539596557617,
+      "pred_gain": 1.5763368606567383,
+      "trace_name": "norway_car_10"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.4369672536849976,
+      "pred_adv": 20.28934097290039,
+      "pred_clean": 11.914636611938477,
+      "pred_gain": 8.374704360961914,
+      "trace_name": "norway_car_11"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 2.2074134349823,
+      "pred_adv": 8.952768325805664,
+      "pred_clean": 6.884358882904053,
+      "pred_gain": 2.0684094429016113,
+      "trace_name": "norway_car_12"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.2362197637557983,
+      "pred_adv": 22.1505184173584,
+      "pred_clean": 11.21987247467041,
+      "pred_gain": 10.930645942687988,
+      "trace_name": "norway_car_2"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.5020616054534912,
+      "pred_adv": 12.73651123046875,
+      "pred_clean": 7.43723726272583,
+      "pred_gain": 5.29927396774292,
+      "trace_name": "norway_car_3"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.1643497943878174,
+      "pred_adv": 17.164886474609375,
+      "pred_clean": 10.457845687866211,
+      "pred_gain": 6.707040786743164,
+      "trace_name": "norway_car_4"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.0865483283996582,
+      "pred_adv": 19.475200653076172,
+      "pred_clean": 10.010660171508789,
+      "pred_gain": 9.464540481567383,
+      "trace_name": "norway_car_5"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.1217741966247559,
+      "pred_adv": 14.376867294311523,
+      "pred_clean": 7.849325180053711,
+      "pred_gain": 6.5275421142578125,
+      "trace_name": "norway_car_6"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.678977131843567,
+      "pred_adv": 14.772807121276855,
+      "pred_clean": 10.596710205078125,
+      "pred_gain": 4.1760969161987305,
+      "trace_name": "norway_car_7"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 0.6874729990959167,
+      "pred_adv": 14.485796928405762,
+      "pred_clean": 7.173258304595947,
+      "pred_gain": 7.3125386238098145,
+      "trace_name": "norway_car_8"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 0.898689866065979,
+      "pred_adv": 17.597246170043945,
+      "pred_clean": 9.279726028442383,
+      "pred_gain": 8.317520141601562,
+      "trace_name": "norway_car_9"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.086997389793396,
+      "pred_adv": 8.34375286102295,
+      "pred_clean": 6.348633766174316,
+      "pred_gain": 1.9951190948486328,
+      "trace_name": "norway_ferry_1"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.2656116485595703,
+      "pred_adv": 21.411081314086914,
+      "pred_clean": 17.393980026245117,
+      "pred_gain": 4.017101287841797,
+      "trace_name": "norway_ferry_10"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.164896011352539,
+      "pred_adv": 20.8133487701416,
+      "pred_clean": 13.503165245056152,
+      "pred_gain": 7.310183525085449,
+      "trace_name": "norway_ferry_11"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.1230260133743286,
+      "pred_adv": 12.206836700439453,
+      "pred_clean": 9.297819137573242,
+      "pred_gain": 2.909017562866211,
+      "trace_name": "norway_ferry_12"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.4002243280410767,
+      "pred_adv": 12.682767868041992,
+      "pred_clean": 10.219857215881348,
+      "pred_gain": 2.4629106521606445,
+      "trace_name": "norway_ferry_13"
+    },
+    {
+      "delta_linf_abs": 0.5,
+      "delta_linf_rel": 0.6639101505279541,
+      "pred_adv": 7.146834373474121,
+      "pred_clean": 5.322734832763672,
+      "pred_gain": 1.8240995407104492,
+      "trace_name": "norway_ferry_14"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.094809651374817,
+      "pred_adv": 10.432368278503418,
+      "pred_clean": 7.637599468231201,
+      "pred_gain": 2.794768810272217,
+      "trace_name": "norway_ferry_15"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 0.5003553032875061,
+      "pred_adv": 6.293449401855469,
+      "pred_clean": 5.58682918548584,
+      "pred_gain": 0.7066202163696289,
+      "trace_name": "norway_ferry_16"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.2380965948104858,
+      "pred_adv": 16.546213150024414,
+      "pred_clean": 10.086686134338379,
+      "pred_gain": 6.459527015686035,
+      "trace_name": "norway_ferry_17"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.9761531352996826,
+      "pred_adv": 12.797037124633789,
+      "pred_clean": 8.615059852600098,
+      "pred_gain": 4.181977272033691,
+      "trace_name": "norway_ferry_18"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 1.4774552583694458,
+      "pred_adv": 23.679088592529297,
+      "pred_clean": 20.613868713378906,
+      "pred_gain": 3.0652198791503906,
+      "trace_name": "norway_ferry_19"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 0.9010188579559326,
+      "pred_adv": 16.34065818786621,
+      "pred_clean": 11.99030590057373,
+      "pred_gain": 4.3503522872924805,
+      "trace_name": "norway_ferry_2"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.73699951171875,
+      "pred_adv": 19.850908279418945,
+      "pred_clean": 13.141624450683594,
+      "pred_gain": 6.709283828735352,
+      "trace_name": "norway_ferry_20"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.3163901567459106,
+      "pred_adv": 12.482906341552734,
+      "pred_clean": 8.214076042175293,
+      "pred_gain": 4.268830299377441,
+      "trace_name": "norway_ferry_3"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.5216509103775024,
+      "pred_adv": 11.344139099121094,
+      "pred_clean": 8.620440483093262,
+      "pred_gain": 2.723698616027832,
+      "trace_name": "norway_ferry_4"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 1.086941123008728,
+      "pred_adv": 15.706165313720703,
+      "pred_clean": 9.935443878173828,
+      "pred_gain": 5.770721435546875,
+      "trace_name": "norway_ferry_5"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 0.6560088992118835,
+      "pred_adv": 21.51779556274414,
+      "pred_clean": 11.89515209197998,
+      "pred_gain": 9.62264347076416,
+      "trace_name": "norway_ferry_6"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.7140542268753052,
+      "pred_adv": 14.22620964050293,
+      "pred_clean": 7.753708362579346,
+      "pred_gain": 6.472501277923584,
+      "trace_name": "norway_ferry_7"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.8114430904388428,
+      "pred_adv": 9.924107551574707,
+      "pred_clean": 6.680511474609375,
+      "pred_gain": 3.243596076965332,
+      "trace_name": "norway_ferry_8"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.688310980796814,
+      "pred_adv": 23.330522537231445,
+      "pred_clean": 17.482894897460938,
+      "pred_gain": 5.847627639770508,
+      "trace_name": "norway_ferry_9"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.0583254098892212,
+      "pred_adv": 15.807873725891113,
+      "pred_clean": 8.32073974609375,
+      "pred_gain": 7.487133979797363,
+      "trace_name": "norway_metro_1"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.372309684753418,
+      "pred_adv": 18.572343826293945,
+      "pred_clean": 11.08100700378418,
+      "pred_gain": 7.491336822509766,
+      "trace_name": "norway_metro_10"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.1683224439620972,
+      "pred_adv": 14.288166046142578,
+      "pred_clean": 8.651342391967773,
+      "pred_gain": 5.636823654174805,
+      "trace_name": "norway_metro_2"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.1513288021087646,
+      "pred_adv": 18.581892013549805,
+      "pred_clean": 12.232258796691895,
+      "pred_gain": 6.34963321685791,
+      "trace_name": "norway_metro_3"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.7521144151687622,
+      "pred_adv": 14.650697708129883,
+      "pred_clean": 8.774971008300781,
+      "pred_gain": 5.875726699829102,
+      "trace_name": "norway_metro_4"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 0.9396300911903381,
+      "pred_adv": 16.0616512298584,
+      "pred_clean": 10.142723083496094,
+      "pred_gain": 5.918928146362305,
+      "trace_name": "norway_metro_5"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.835564136505127,
+      "pred_adv": 21.517866134643555,
+      "pred_clean": 16.482995986938477,
+      "pred_gain": 5.034870147705078,
+      "trace_name": "norway_metro_6"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.2266509532928467,
+      "pred_adv": 23.315153121948242,
+      "pred_clean": 17.98833465576172,
+      "pred_gain": 5.326818466186523,
+      "trace_name": "norway_metro_7"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.3492627143859863,
+      "pred_adv": 19.651721954345703,
+      "pred_clean": 12.334139823913574,
+      "pred_gain": 7.317582130432129,
+      "trace_name": "norway_metro_8"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.1918420791625977,
+      "pred_adv": 18.4150390625,
+      "pred_clean": 10.740036964416504,
+      "pred_gain": 7.675002098083496,
+      "trace_name": "norway_metro_9"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.478685736656189,
+      "pred_adv": 23.394582748413086,
+      "pred_clean": 18.21177101135254,
+      "pred_gain": 5.182811737060547,
+      "trace_name": "norway_train_1"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 0.8042576313018799,
+      "pred_adv": 7.713778018951416,
+      "pred_clean": 6.254438400268555,
+      "pred_gain": 1.4593396186828613,
+      "trace_name": "norway_train_10"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 0.8938872218132019,
+      "pred_adv": 8.190293312072754,
+      "pred_clean": 6.716462135314941,
+      "pred_gain": 1.4738311767578125,
+      "trace_name": "norway_train_11"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 0.9863303899765015,
+      "pred_adv": 14.186878204345703,
+      "pred_clean": 10.02236557006836,
+      "pred_gain": 4.164512634277344,
+      "trace_name": "norway_train_12"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 0.8933901786804199,
+      "pred_adv": 18.289121627807617,
+      "pred_clean": 11.220621109008789,
+      "pred_gain": 7.068500518798828,
+      "trace_name": "norway_train_13"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.0684936046600342,
+      "pred_adv": 18.290407180786133,
+      "pred_clean": 9.62278938293457,
+      "pred_gain": 8.667617797851562,
+      "trace_name": "norway_train_14"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 0.5946178436279297,
+      "pred_adv": 11.64909553527832,
+      "pred_clean": 6.914797782897949,
+      "pred_gain": 4.734297752380371,
+      "trace_name": "norway_train_15"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 0.8871817588806152,
+      "pred_adv": 9.02437686920166,
+      "pred_clean": 6.5475358963012695,
+      "pred_gain": 2.4768409729003906,
+      "trace_name": "norway_train_16"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 0.9001225233078003,
+      "pred_adv": 9.000810623168945,
+      "pred_clean": 7.179975509643555,
+      "pred_gain": 1.8208351135253906,
+      "trace_name": "norway_train_17"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 0.5769256353378296,
+      "pred_adv": 6.394113063812256,
+      "pred_clean": 5.472507476806641,
+      "pred_gain": 0.9216055870056152,
+      "trace_name": "norway_train_18"
+    },
+    {
+      "delta_linf_abs": 0.5000002384185791,
+      "delta_linf_rel": 0.8164574503898621,
+      "pred_adv": 12.635766983032227,
+      "pred_clean": 8.507070541381836,
+      "pred_gain": 4.128696441650391,
+      "trace_name": "norway_train_19"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.5310932397842407,
+      "pred_adv": 21.97872543334961,
+      "pred_clean": 17.094072341918945,
+      "pred_gain": 4.884653091430664,
+      "trace_name": "norway_train_2"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.097848653793335,
+      "pred_adv": 15.751108169555664,
+      "pred_clean": 11.479610443115234,
+      "pred_gain": 4.27149772644043,
+      "trace_name": "norway_train_20"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.0495367050170898,
+      "pred_adv": 17.0615291595459,
+      "pred_clean": 9.250974655151367,
+      "pred_gain": 7.810554504394531,
+      "trace_name": "norway_train_21"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.0993623733520508,
+      "pred_adv": 20.49604606628418,
+      "pred_clean": 15.118887901306152,
+      "pred_gain": 5.377158164978027,
+      "trace_name": "norway_train_3"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.0895260572433472,
+      "pred_adv": 11.843388557434082,
+      "pred_clean": 9.581327438354492,
+      "pred_gain": 2.26206111907959,
+      "trace_name": "norway_train_4"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 0.9064916968345642,
+      "pred_adv": 21.456430435180664,
+      "pred_clean": 17.43029022216797,
+      "pred_gain": 4.026140213012695,
+      "trace_name": "norway_train_5"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.4360322952270508,
+      "pred_adv": 22.594900131225586,
+      "pred_clean": 13.958089828491211,
+      "pred_gain": 8.636810302734375,
+      "trace_name": "norway_train_6"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.5589938163757324,
+      "pred_adv": 18.723066329956055,
+      "pred_clean": 9.971473693847656,
+      "pred_gain": 8.751592636108398,
+      "trace_name": "norway_train_7"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.430490255355835,
+      "pred_adv": 21.974069595336914,
+      "pred_clean": 17.17306900024414,
+      "pred_gain": 4.801000595092773,
+      "trace_name": "norway_train_8"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.096973180770874,
+      "pred_adv": 21.717832565307617,
+      "pred_clean": 16.376981735229492,
+      "pred_gain": 5.340850830078125,
+      "trace_name": "norway_train_9"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.8089021444320679,
+      "pred_adv": 22.571725845336914,
+      "pred_clean": 16.142284393310547,
+      "pred_gain": 6.429441452026367,
+      "trace_name": "norway_tram_1"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.6824076175689697,
+      "pred_adv": 20.502330780029297,
+      "pred_clean": 13.34078598022461,
+      "pred_gain": 7.1615447998046875,
+      "trace_name": "norway_tram_10"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.7123287916183472,
+      "pred_adv": 21.76935577392578,
+      "pred_clean": 14.261448860168457,
+      "pred_gain": 7.507906913757324,
+      "trace_name": "norway_tram_11"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 0.9827800989151001,
+      "pred_adv": 21.018892288208008,
+      "pred_clean": 13.253229141235352,
+      "pred_gain": 7.765663146972656,
+      "trace_name": "norway_tram_12"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.0784202814102173,
+      "pred_adv": 18.444759368896484,
+      "pred_clean": 10.942420959472656,
+      "pred_gain": 7.502338409423828,
+      "trace_name": "norway_tram_13"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.6730979681015015,
+      "pred_adv": 21.926578521728516,
+      "pred_clean": 15.428757667541504,
+      "pred_gain": 6.497820854187012,
+      "trace_name": "norway_tram_14"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.529038667678833,
+      "pred_adv": 21.915836334228516,
+      "pred_clean": 16.165525436401367,
+      "pred_gain": 5.750310897827148,
+      "trace_name": "norway_tram_15"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.5924403667449951,
+      "pred_adv": 21.5197811126709,
+      "pred_clean": 12.410623550415039,
+      "pred_gain": 9.10915756225586,
+      "trace_name": "norway_tram_16"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.512384295463562,
+      "pred_adv": 21.88719940185547,
+      "pred_clean": 13.675349235534668,
+      "pred_gain": 8.2118501663208,
+      "trace_name": "norway_tram_17"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.4367649555206299,
+      "pred_adv": 22.587709426879883,
+      "pred_clean": 17.6033878326416,
+      "pred_gain": 4.984321594238281,
+      "trace_name": "norway_tram_18"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.206675410270691,
+      "pred_adv": 10.661118507385254,
+      "pred_clean": 6.329181671142578,
+      "pred_gain": 4.331936836242676,
+      "trace_name": "norway_tram_19"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.7434693574905396,
+      "pred_adv": 20.788162231445312,
+      "pred_clean": 12.12341594696045,
+      "pred_gain": 8.664746284484863,
+      "trace_name": "norway_tram_2"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.4092333316802979,
+      "pred_adv": 21.756200790405273,
+      "pred_clean": 13.01192855834961,
+      "pred_gain": 8.744272232055664,
+      "trace_name": "norway_tram_20"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.2862765789031982,
+      "pred_adv": 21.19784927368164,
+      "pred_clean": 13.030010223388672,
+      "pred_gain": 8.167839050292969,
+      "trace_name": "norway_tram_21"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.248008131980896,
+      "pred_adv": 22.388731002807617,
+      "pred_clean": 18.0771484375,
+      "pred_gain": 4.311582565307617,
+      "trace_name": "norway_tram_22"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.2637174129486084,
+      "pred_adv": 21.799800872802734,
+      "pred_clean": 15.309618949890137,
+      "pred_gain": 6.490181922912598,
+      "trace_name": "norway_tram_23"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.2027311325073242,
+      "pred_adv": 22.265098571777344,
+      "pred_clean": 15.54509449005127,
+      "pred_gain": 6.720004081726074,
+      "trace_name": "norway_tram_24"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.203935146331787,
+      "pred_adv": 21.069780349731445,
+      "pred_clean": 10.293161392211914,
+      "pred_gain": 10.776618957519531,
+      "trace_name": "norway_tram_25"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.4457060098648071,
+      "pred_adv": 22.562929153442383,
+      "pred_clean": 17.873390197753906,
+      "pred_gain": 4.689538955688477,
+      "trace_name": "norway_tram_26"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 0.974767804145813,
+      "pred_adv": 19.34601593017578,
+      "pred_clean": 11.407530784606934,
+      "pred_gain": 7.938485145568848,
+      "trace_name": "norway_tram_27"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.4150358438491821,
+      "pred_adv": 21.47606658935547,
+      "pred_clean": 15.858848571777344,
+      "pred_gain": 5.617218017578125,
+      "trace_name": "norway_tram_28"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.4039967060089111,
+      "pred_adv": 22.398773193359375,
+      "pred_clean": 15.947051048278809,
+      "pred_gain": 6.451722145080566,
+      "trace_name": "norway_tram_29"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.929854154586792,
+      "pred_adv": 22.772687911987305,
+      "pred_clean": 16.732688903808594,
+      "pred_gain": 6.039999008178711,
+      "trace_name": "norway_tram_3"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.209456205368042,
+      "pred_adv": 21.97466468811035,
+      "pred_clean": 16.509605407714844,
+      "pred_gain": 5.465059280395508,
+      "trace_name": "norway_tram_30"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.6480932235717773,
+      "pred_adv": 20.809329986572266,
+      "pred_clean": 11.815136909484863,
+      "pred_gain": 8.994193077087402,
+      "trace_name": "norway_tram_31"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.3682353496551514,
+      "pred_adv": 22.92267608642578,
+      "pred_clean": 17.217430114746094,
+      "pred_gain": 5.7052459716796875,
+      "trace_name": "norway_tram_32"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.0322822332382202,
+      "pred_adv": 21.371023178100586,
+      "pred_clean": 11.497955322265625,
+      "pred_gain": 9.873067855834961,
+      "trace_name": "norway_tram_33"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 0.9031625390052795,
+      "pred_adv": 18.395877838134766,
+      "pred_clean": 12.959966659545898,
+      "pred_gain": 5.435911178588867,
+      "trace_name": "norway_tram_34"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.6743415594100952,
+      "pred_adv": 18.63854217529297,
+      "pred_clean": 11.040143013000488,
+      "pred_gain": 7.5983991622924805,
+      "trace_name": "norway_tram_35"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.7457823753356934,
+      "pred_adv": 22.608163833618164,
+      "pred_clean": 14.2097749710083,
+      "pred_gain": 8.398388862609863,
+      "trace_name": "norway_tram_36"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 0.662419855594635,
+      "pred_adv": 16.050426483154297,
+      "pred_clean": 8.800620079040527,
+      "pred_gain": 7.2498064041137695,
+      "trace_name": "norway_tram_37"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.29844331741333,
+      "pred_adv": 19.70478057861328,
+      "pred_clean": 12.909256935119629,
+      "pred_gain": 6.795523643493652,
+      "trace_name": "norway_tram_38"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.7481508255004883,
+      "pred_adv": 19.859189987182617,
+      "pred_clean": 10.292474746704102,
+      "pred_gain": 9.566715240478516,
+      "trace_name": "norway_tram_39"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.6425484418869019,
+      "pred_adv": 22.684375762939453,
+      "pred_clean": 17.193031311035156,
+      "pred_gain": 5.491344451904297,
+      "trace_name": "norway_tram_4"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.2862168550491333,
+      "pred_adv": 23.764135360717773,
+      "pred_clean": 20.78892707824707,
+      "pred_gain": 2.975208282470703,
+      "trace_name": "norway_tram_40"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.641223430633545,
+      "pred_adv": 18.543312072753906,
+      "pred_clean": 9.393311500549316,
+      "pred_gain": 9.15000057220459,
+      "trace_name": "norway_tram_41"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.140769600868225,
+      "pred_adv": 21.550304412841797,
+      "pred_clean": 16.161937713623047,
+      "pred_gain": 5.38836669921875,
+      "trace_name": "norway_tram_42"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.2437559366226196,
+      "pred_adv": 19.94415283203125,
+      "pred_clean": 9.732001304626465,
+      "pred_gain": 10.212151527404785,
+      "trace_name": "norway_tram_43"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.0552295446395874,
+      "pred_adv": 15.090665817260742,
+      "pred_clean": 7.443841457366943,
+      "pred_gain": 7.646824359893799,
+      "trace_name": "norway_tram_44"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.8866711854934692,
+      "pred_adv": 21.349245071411133,
+      "pred_clean": 16.356821060180664,
+      "pred_gain": 4.992424011230469,
+      "trace_name": "norway_tram_45"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.3279242515563965,
+      "pred_adv": 19.95001220703125,
+      "pred_clean": 11.621259689331055,
+      "pred_gain": 8.328752517700195,
+      "trace_name": "norway_tram_46"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.3147432804107666,
+      "pred_adv": 23.084716796875,
+      "pred_clean": 15.915862083435059,
+      "pred_gain": 7.168854713439941,
+      "trace_name": "norway_tram_47"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.9671003818511963,
+      "pred_adv": 21.828887939453125,
+      "pred_clean": 13.812756538391113,
+      "pred_gain": 8.016131401062012,
+      "trace_name": "norway_tram_48"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 2.101238489151001,
+      "pred_adv": 22.525543212890625,
+      "pred_clean": 14.958712577819824,
+      "pred_gain": 7.566830635070801,
+      "trace_name": "norway_tram_49"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.5827977657318115,
+      "pred_adv": 17.425739288330078,
+      "pred_clean": 11.081315040588379,
+      "pred_gain": 6.344424247741699,
+      "trace_name": "norway_tram_5"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 2.0607454776763916,
+      "pred_adv": 21.561586380004883,
+      "pred_clean": 11.673195838928223,
+      "pred_gain": 9.88839054107666,
+      "trace_name": "norway_tram_50"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.5805943012237549,
+      "pred_adv": 20.054031372070312,
+      "pred_clean": 12.283318519592285,
+      "pred_gain": 7.770712852478027,
+      "trace_name": "norway_tram_51"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.761008858680725,
+      "pred_adv": 23.611242294311523,
+      "pred_clean": 17.40660285949707,
+      "pred_gain": 6.204639434814453,
+      "trace_name": "norway_tram_52"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.699663519859314,
+      "pred_adv": 19.30590057373047,
+      "pred_clean": 13.407743453979492,
+      "pred_gain": 5.898157119750977,
+      "trace_name": "norway_tram_53"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.3738845586776733,
+      "pred_adv": 23.835182189941406,
+      "pred_clean": 21.565378189086914,
+      "pred_gain": 2.269804000854492,
+      "trace_name": "norway_tram_54"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.1777849197387695,
+      "pred_adv": 13.613082885742188,
+      "pred_clean": 8.294042587280273,
+      "pred_gain": 5.319040298461914,
+      "trace_name": "norway_tram_55"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.1186951398849487,
+      "pred_adv": 17.947383880615234,
+      "pred_clean": 9.516764640808105,
+      "pred_gain": 8.430619239807129,
+      "trace_name": "norway_tram_56"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.4787020683288574,
+      "pred_adv": 20.99028205871582,
+      "pred_clean": 12.712774276733398,
+      "pred_gain": 8.277507781982422,
+      "trace_name": "norway_tram_6"
+    },
+    {
+      "delta_linf_abs": 0.5000001192092896,
+      "delta_linf_rel": 1.3721072673797607,
+      "pred_adv": 23.519594192504883,
+      "pred_clean": 18.731725692749023,
+      "pred_gain": 4.787868499755859,
+      "trace_name": "norway_tram_7"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.6277366876602173,
+      "pred_adv": 19.602367401123047,
+      "pred_clean": 10.446706771850586,
+      "pred_gain": 9.155660629272461,
+      "trace_name": "norway_tram_8"
+    },
+    {
+      "delta_linf_abs": 0.5000000596046448,
+      "delta_linf_rel": 1.4002069234848022,
+      "pred_adv": 20.72617530822754,
+      "pred_clean": 12.672322273254395,
+      "pred_gain": 8.053853034973145,
+      "trace_name": "norway_tram_9"
+    }
+  ],
+  "pred_gain_max": 10.930645942687988,
+  "pred_gain_mean": 5.67479133605957,
+  "source": "/nfs/sdr/Pensieve-PPO/src/test",
+  "surrogate": "/nfs/sdr/surrogate/trace_gap_surrogate.pt",
+  "surrogate_model_kwargs": {
+    "dropout": 0.1,
+    "embed_dim": 64,
+    "head_dim": 64,
+    "hidden_dim": 96,
+    "input_dim": 4,
+    "num_layers": 1
+  }
+}
