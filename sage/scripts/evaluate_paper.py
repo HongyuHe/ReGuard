@@ -11,6 +11,8 @@ import subprocess
 import sys
 import time
 
+from _episode_identity import validate_episode_ids
+
 ROOT = Path(__file__).resolve().parents[1]
 FRAMEWORK = ROOT.name
 
@@ -111,6 +113,18 @@ def main():
                 for required in paths:
                     if not required.exists():
                         raise FileNotFoundError(f'{case["name"]}: required evaluation input {required}')
+                if flag in {'--test-manifest', '--generated-manifest'}:
+                    field = 'entries' if flag == '--test-manifest' else 'generated_entries'
+                    entries = json.loads(path.read_text())[field]
+                    count = min(case['count'], args.trace_limit) if args.trace_limit else case['count']
+                    if len(entries) < count:
+                        raise RuntimeError(f'{case["name"]}: expected at least {count} input traces in {path}')
+                    if field == 'entries':
+                        identifiers = [entry.get('trace_id') for entry in entries]
+                    else:
+                        identifiers = [entry.get('trace_name') or entry.get('trace_id') or f'generated-{index:03d}'
+                                       for index, entry in enumerate(entries)]
+                    validate_episode_ids(identifiers, path)
     if args.check_inputs:
         print(f'{FRAMEWORK}: inputs for {len(config["cases"])} evaluation cases verified')
         return

@@ -10,6 +10,8 @@ from pathlib import Path, PurePosixPath
 import shutil
 import tempfile
 
+from _episode_identity import validate_episode_ids
+
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_FORMAT = 'reguard-measured-figure-data-v2'
 
@@ -117,8 +119,9 @@ def measurement_files(results, framework):
             relative = 'eval-300k-50ms-new/' + case['name'] + '/eval_summary.json'
             payload = json.loads((root / relative).read_text())
             rows = payload['per_episode']
-            if len(rows) != case['count'] or len({r['episode_id'] for r in rows}) != len(rows):
-                raise RuntimeError(f'Missing or duplicate episodes in {relative}')
+            if len(rows) != case['count']:
+                raise RuntimeError(f'Expected {case["count"]} episodes in {relative}; found {len(rows)}')
+            validate_episode_ids((row.get('episode_id') for row in rows), relative)
             finite(rows, ['gap_best_baseline_gap_mean', 'gap_best_baseline_score_mean'], relative)
             files.append(relative)
             timing = str(Path(relative).with_name('controller_timing_summary.json'))

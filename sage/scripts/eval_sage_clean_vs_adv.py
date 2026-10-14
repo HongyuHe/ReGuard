@@ -643,6 +643,7 @@ DEFAULT_CLEAN_EVAL_CONFIG = "attacks/models/gap_adv_20260320_gap-constrained-all
 
 if __package__ in (None, ""):
     sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+    from scripts._episode_identity import validate_episode_ids
     from scripts._trace_attack_common import (
         IndependentAttackEnv,
         attack_bounds_from_config,
@@ -659,6 +660,7 @@ if __package__ in (None, ""):
         utc_now_iso,
     )
 else:
+    from ._episode_identity import validate_episode_ids
     from ._trace_attack_common import (
         IndependentAttackEnv,
         attack_bounds_from_config,
@@ -2167,6 +2169,7 @@ def main() -> None:
 
     clean_schedules: list[tuple[str, list[np.ndarray]]] = []
     if run_clean_rollout:
+        validate_episode_ids((entry.trace_id for entry in test_entries), test_manifest_path)
         for entry in test_entries:
             schedule = load_mahimahi_trace_schedule(
                 entry.copied_path,
@@ -2174,7 +2177,7 @@ def main() -> None:
             )
             clean_schedules.append(
                 (
-                    entry.name,
+                    entry.trace_id,
                     build_clean_action_schedule(
                         schedule,
                         uplink_delay_ms=clean_uplink_delay_ms if use_parallel_gap_eval else 0.0,
@@ -2212,6 +2215,8 @@ def main() -> None:
         else base_bounds
     )
 
+    validate_episode_ids((item[0] for item in clean_schedules), 'clean evaluation schedules')
+    validate_episode_ids((item[0] for item in adv_schedules), 'adversarial evaluation schedules')
     run_namespace = acquire_run_namespace(
         repo_root=repo_root,
         runtime_dir=str(args.runtime_dir),
